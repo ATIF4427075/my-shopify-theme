@@ -1,0 +1,113 @@
+<div class="about-page section-spacing" id="MainAbout-{{ section.id }}">
+  <div class="container">
+    
+    <!-- Hero Banner -->
+    <div class="glass-card" style="padding: clamp(40px, 6vw, 72px); text-align: center; margin-bottom: 64px; position: relative; overflow: hidden; background: radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.15) 0%, rgba(9, 13, 22, 0.95) 100%);">
+      <span class="section-subtitle">The Engineering Heritage</span>
+      <h1 style="font-size: clamp(2.4rem, 5vw, 4rem); margin-bottom: 20px;">
+        WHERE HOROLOGY MEETS AEROSPACE
+      </h1>
+      <p style="max-width: 760px; margin: 0 auto; color: var(--text-secondary); font-size: 1.15rem; line-height: 1.8;">
+        Kinetix Pro was established with a singular doctrine: smartwatches should not be disposable gadgets. They should be precision-crafted lifetime instruments built from indestructible aerospace titanium and medical-grade telemetry.
+      </p>
+    </div>
+
+    <!-- Main Laboratory Feature Grid -->
+    <div class="grid grid-cols-2" style="align-items: center; gap: clamp(36px, 6vw, 64px); margin-bottom: 80px;">
+      <div>
+        <div style="border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-lg);">
+          <img src="{{ 'engineering-heritage.jpg' | asset_url }}" alt="Kinetix Watchmaking Laboratory" style="width: 100%; height: 100%; object-fit: cover;" width="800" height="450">
+        </div>
+      </div>
+      <div>
+        <span class="badge badge-new" style="margin-bottom: 12px;">Pinnacle Craftsmanship</span>
+        <h2 style="font-size: 2.2rem; margin-bottom: 20px; line-height: 1.2;">
+          Micro-Milled from Solid Grade-5 Titanium
+        </h2>
+        <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px;">
+          Standard smartwatches use cast aluminum or stamped polymer shells that dent and crack. Every Kinetix Pro chassis is CNC-machined for 4.5 hours from a solid billet of aerospace Ti-6Al-4V titanium, followed by cryogenic stress-relieving and diamond-like carbon vapor deposition.
+        </p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding-top: 16px; border-top: 1px solid var(--border-subtle);">
+          <div>
+            <div style="font-size: 1.8rem; font-weight: 800; color: var(--accent-gold); font-family: var(--font-heading);">0.002mm</div>
+            <div style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase;">Milling Tolerance</div>
+          </div>
+          <div>
+            <div style="font-size: 1.8rem; font-weight: 800; color: #10b981; font-family: var(--font-heading);">10 ATM</div>
+            <div style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase;">Hydrostatic Depth</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Engineering Timeline -->
+    <div style="margin-bottom: 80px;">
+      <div class="section-header">
+        <span class="section-subtitle">Chronological Evolution</span>
+        <h2 class="section-title">THE PATH TO THE APEX SERIES</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;">
+        <div class="glass-card" style="padding: 28px;">
+          <div style="font-size: 2rem; font-weight: 800; color: var(--accent-gold); font-family: var(--font-heading); margin-bottom: 8px;">2018</div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Stealth Laboratory</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">Founded in Zurich by aerospace materials engineers researching titanium-polymer thermal bonding.</p>
+        </div>
+
+        <div class="glass-card" style="padding: 28px;">
+          <div style="font-size: 2rem; font-weight: 800; color: var(--accent-gold); font-family: var(--font-heading); margin-bottom: 8px;">2021</div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 8px;">BioPulse™ Patent</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">Patented the 8-channel photodiode telemetry sensor with clinical ECG algorithmic calibration.</p>
+        </div>
+
+        <div class="glass-card" style="padding: 28px;">
+          <div style="font-size: 2rem; font-weight: 800; color: var(--accent-gold); font-family: var(--font-heading); margin-bottom: 8px;">2024</div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Polar Expedition</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">Chosen by Antarctic research teams as standard tactical wrist telemetry in -50°C conditions.</p>
+        </div>
+
+        <div class="glass-card" style="padding: 28px; border-color: var(--accent-gold);">
+          <div style="font-size: 2rem; font-weight: 800; color: var(--accent-gold); font-family: var(--font-heading); margin-bottom: 8px;">2026</div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Apex Pro Release</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">The worldwide launch of the Apex Pro titanium flagship and Heritage Royale chronograph.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Global Cleanroom Labs -->
+    <div class="glass-card" style="padding: 48px; border-radius: var(--radius-xl); text-align: center;">
+      <h3 style="font-size: 1.8rem; margin-bottom: 12px;">Global Engineering Centers</h3>
+      <p style="max-width: 600px; margin: 0 auto 36px auto; color: var(--text-secondary);">
+        Collaborating across 3 continents to push the frontier of wearable mechanics and bio-signal processing.
+      </p>
+      <div class="grid grid-cols-3" style="text-align: left;">
+        <div style="padding: 20px; background: rgba(255,255,255,0.03); border-radius: var(--radius-md);">
+          <h4 style="color: var(--accent-gold); margin-bottom: 6px;">🇨🇭 Zurich, Switzerland</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary);">Mechanical movement horology, titanium micro-machining & sapphire polishing.</p>
+        </div>
+        <div style="padding: 20px; background: rgba(255,255,255,0.03); border-radius: var(--radius-md);">
+          <h4 style="color: var(--accent-gold); margin-bottom: 6px;">🇯🇵 Tokyo, Japan</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary);">BioPulse™ optical semiconductor sensors and low-power microcontrollers.</p>
+        </div>
+        <div style="padding: 20px; background: rgba(255,255,255,0.03); border-radius: var(--radius-md);">
+          <h4 style="color: var(--accent-gold); margin-bottom: 6px;">🇺🇸 Boulder, Colorado</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary);">High-altitude testing, GPS telemetry algorithms & extreme thermal stress lab.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<style>
+@media (max-width: 900px) {
+  .about-page .grid { grid-template-columns: 1fr !important; }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Main About",
+  "settings": []
+}
+{% endschema %}

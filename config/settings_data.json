@@ -1,0 +1,13 @@
+{
+  "current": {
+    "color_primary": "#090d16",
+    "color_surface": "#0f172a",
+    "color_accent": "#f59e0b",
+    "color_text": "#f8fafc",
+    "free_shipping_threshold": 150,
+    "enable_cart_drawer": true,
+    "social_instagram_link": "https://instagram.com",
+    "social_youtube_link": "https://youtube.com",
+    "social_twitter_link": "https://twitter.com"
+  }
+}

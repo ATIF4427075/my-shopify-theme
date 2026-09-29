@@ -1,0 +1,133 @@
+<section class="section-spacing" id="FeaturedCollections-{{ section.id }}">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">{{ section.settings.subtitle | default: 'The Kinetix Lineup' }}</span>
+      <h2 class="section-title">{{ section.settings.title | default: 'ENGINEERED FOR EVERY DISCIPLINE' }}</h2>
+      <p class="section-description">
+        {{ section.settings.description | default: 'Explore four pinnacle tiers of high-performance wearable technology, built with aerospace materials and laboratory-calibrated sensors.' }}
+      </p>
+    </div>
+
+    <!-- Bento Grid Collections Layout -->
+    <div class="bento-grid" style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px;">
+      <!-- Collection 1: Apex Flagship (Large Span 7 cols) -->
+      <div class="glass-card bento-card bento-card--large" style="grid-column: span 7; position: relative; overflow: hidden; min-height: 380px; padding: 36px; display: flex; flex-direction: column; justify-content: flex-end; background: linear-gradient(180deg, rgba(19, 29, 49, 0.4) 0%, rgba(9, 13, 22, 0.95) 100%);">
+        <img
+          src="{{ 'watch-apex-pro.jpg' | asset_url }}"
+          alt="Apex Titanium Series"
+          style="position: absolute; top: 0; right: 0; width: 60%; height: 100%; object-fit: cover; opacity: 0.85; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);"
+          class="bento-img"
+        >
+        <div style="position: relative; z-index: 2; max-width: 340px;">
+          <span class="badge badge-new" style="margin-bottom: 12px;">Flagship Tier</span>
+          <h3 style="font-size: 1.8rem; margin-bottom: 8px;">Apex Pro Titanium</h3>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 18px;">Aerospace Grade-5 Titanium case with dual-satellite telemetry & 100m water resistance.</p>
+          <a href="/products/kinetix-apex-pro" class="btn btn-primary btn-sm">
+            <span>Explore Collection</span>
+            {% render 'icon-arrow' %}
+          </a>
+        </div>
+      </div>
+
+      <!-- Collection 2: Military Tactical Rugged (Span 5 cols) -->
+      <div class="glass-card bento-card" style="grid-column: span 5; position: relative; overflow: hidden; min-height: 380px; padding: 36px; display: flex; flex-direction: column; justify-content: flex-end; background: linear-gradient(180deg, rgba(19, 29, 49, 0.4) 0%, rgba(9, 13, 22, 0.95) 100%);">
+        <img
+          src="{{ 'watch-thrux-military.jpg' | asset_url }}"
+          alt="Military Tactical Rugged"
+          style="position: absolute; top: 0; right: 0; width: 70%; height: 100%; object-fit: cover; opacity: 0.8; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);"
+          class="bento-img"
+        >
+        <div style="position: relative; z-index: 2;">
+          <span class="badge badge-featured" style="margin-bottom: 12px;">MIL-SPEC 810H</span>
+          <h3 style="font-size: 1.6rem; margin-bottom: 8px;">Thrux Tactical GPS</h3>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 18px;">170+ sports modes, built-in altimeter, barometer & storm alert system.</p>
+          <a href="/collections/military-rugged" class="btn btn-secondary btn-sm">
+            <span>View Rugged Series</span>
+            {% render 'icon-arrow' %}
+          </a>
+        </div>
+      </div>
+
+      <!-- Collection 3: Luxury Chronograph (Span 5 cols) -->
+      <div class="glass-card bento-card" style="grid-column: span 5; position: relative; overflow: hidden; min-height: 380px; padding: 36px; display: flex; flex-direction: column; justify-content: flex-end; background: linear-gradient(180deg, rgba(19, 29, 49, 0.4) 0%, rgba(9, 13, 22, 0.95) 100%);">
+        <img
+          src="{{ 'watch-heritage-royale.jpg' | asset_url }}"
+          alt="Heritage Royale Luxury Chronograph"
+          style="position: absolute; top: 0; right: 0; width: 70%; height: 100%; object-fit: cover; opacity: 0.85; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);"
+          class="bento-img"
+        >
+        <div style="position: relative; z-index: 2;">
+          <span class="badge" style="background: rgba(245, 158, 11, 0.2); color: var(--accent-gold); margin-bottom: 12px;">Horology Luxury</span>
+          <h3 style="font-size: 1.6rem; margin-bottom: 8px;">Heritage Royale</h3>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 18px;">Rose gold bezel with deep emerald sunray dial and hybrid smart chronograph subdials.</p>
+          <a href="/collections/luxury-chronograph" class="btn btn-secondary btn-sm">
+            <span>View Heritage Series</span>
+            {% render 'icon-arrow' %}
+          </a>
+        </div>
+      </div>
+
+      <!-- Collection 4: Pulse Elite Fitness ECG (Span 7 cols) -->
+      <div class="glass-card bento-card bento-card--large" style="grid-column: span 7; position: relative; overflow: hidden; min-height: 380px; padding: 36px; display: flex; flex-direction: column; justify-content: flex-end; background: linear-gradient(180deg, rgba(19, 29, 49, 0.4) 0%, rgba(9, 13, 22, 0.95) 100%);">
+        <img
+          src="{{ 'watch-pulse-elite.jpg' | asset_url }}"
+          alt="Pulse Elite Active ECG"
+          style="position: absolute; top: 0; right: 0; width: 60%; height: 100%; object-fit: cover; opacity: 0.85; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);"
+          class="bento-img"
+        >
+        <div style="position: relative; z-index: 2; max-width: 340px;">
+          <span class="badge" style="background: rgba(16, 185, 129, 0.2); color: #34d399; margin-bottom: 12px;">BioTelemetry 2.0</span>
+          <h3 style="font-size: 1.8rem; margin-bottom: 8px;">Pulse Elite Ultra</h3>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 18px;">Curved borderless OLED, medical-grade SpO2 pulse sensor, and continuous sleep telemetry.</p>
+          <a href="/collections/fitness-trackers" class="btn btn-secondary btn-sm">
+            <span>Explore Pulse Series</span>
+            {% render 'icon-arrow' %}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.bento-card:hover .bento-img {
+  transform: scale(1.08) rotate(-1deg);
+}
+@media (max-width: 1024px) {
+  .bento-grid > div {
+    grid-column: span 12 !important;
+    min-height: 320px !important;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Featured Collections",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Section Subtitle",
+      "default": "The Kinetix Lineup"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "ENGINEERED FOR EVERY DISCIPLINE"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Explore four pinnacle tiers of high-performance wearable technology, built with aerospace materials and laboratory-calibrated sensors."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Collections"
+    }
+  ]
+}
+{% endschema %}

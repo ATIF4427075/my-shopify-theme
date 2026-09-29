@@ -1,0 +1,60 @@
+<section class="section-spacing" id="Newsletter-{{ section.id }}" style="position: relative; overflow: hidden;">
+  <div class="container">
+    <div class="glass-card" style="padding: clamp(32px, 6vw, 64px); background: radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.12) 0%, rgba(19, 29, 49, 0.9) 100%); border: 1px solid rgba(245, 158, 11, 0.3); text-align: center; max-width: 900px; margin: 0 auto; border-radius: var(--radius-xl);">
+      <span class="badge badge-new" style="margin-bottom: 16px;">VIP OPERATOR DISPATCH</span>
+      <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); margin-bottom: 16px;">
+        JOIN THE KINETIX INNER CIRCLE
+      </h2>
+      <p style="max-width: 600px; margin: 0 auto 32px auto; color: var(--text-secondary); font-size: 1.05rem;">
+        Subscribe to receive early prototype drops, firmware telemetry updates, and an instant <strong style="color: var(--accent-gold);">$30 VIP welcome voucher</strong> on your first order.
+      </p>
+
+      {% form 'customer', class: 'newsletter-form', style: 'max-width: 540px; margin: 0 auto;' %}
+        <input type="hidden" name="contact[tags]" value="newsletter,vip">
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <input
+            type="email"
+            name="contact[email]"
+            class="form-input"
+            placeholder="Enter your email address..."
+            required
+            style="flex: 1; min-width: 240px; background: rgba(9, 13, 22, 0.8);"
+          >
+          <button type="submit" class="btn btn-primary btn-lg" style="min-width: 160px;">
+            <span>Unlock $30 Code</span>
+          </button>
+        </div>
+        {%- if form.posted_successfully? -%}
+          <p style="margin-top: 16px; color: #10b981; font-weight: 700;">
+            ✓ VIP code <span style="color:var(--accent-gold);">KINETIXVIP30</span> activated! Check your inbox.
+          </p>
+        {%- endif -%}
+      {% endform %}
+
+      <div style="margin-top: 24px; font-size: 0.8rem; color: var(--text-muted); display: flex; justify-content: center; align-items: center; gap: 20px;">
+        <span>🔒 256-Bit Encrypted</span>
+        <span>🚫 Zero Spam Policy</span>
+        <span>⚡ Unsubscribe Anytime</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Newsletter",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "JOIN THE KINETIX INNER CIRCLE"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Newsletter"
+    }
+  ]
+}
+{% endschema %}

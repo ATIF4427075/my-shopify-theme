@@ -1,0 +1,38 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {}
+    },
+    "specs": {
+      "type": "tech-specs-matrix",
+      "settings": {
+        "subtitle": "Engineering Tolerances",
+        "title": "TECHNICAL BENCHMARKS",
+        "description": "Exceeding international horological and defense standards."
+      }
+    },
+    "testimonials": {
+      "type": "testimonials-reviews",
+      "settings": {
+        "subtitle": "Operator Reviews",
+        "title": "FIELD REPORTS & TESTIMONIALS",
+        "description": "Authentic telemetry reports from extreme climate tests and expedition field trials."
+      }
+    },
+    "related": {
+      "type": "featured-products",
+      "settings": {
+        "subtitle": "Modular Tactical Ecosystem",
+        "title": "COMPATIBLE WATCHES & GEAR",
+        "description": "Complementary smart horology pieces for diverse mission environments."
+      }
+    }
+  },
+  "order": [
+    "main",
+    "specs",
+    "testimonials",
+    "related"
+  ]
+}

@@ -1,0 +1,250 @@
+<div class="product-page section-spacing" id="MainProduct-{{ section.id }}">
+  <div class="container">
+    
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 28px; display: flex; align-items: center; gap: 8px;">
+      <a href="/" style="color: var(--text-secondary);">Home</a>
+      <span>/</span>
+      <a href="/collections/all" style="color: var(--text-secondary);">Smartwatches</a>
+      <span>/</span>
+      <span style="color: var(--accent-gold);">{{ product.title | default: 'Kinetix Apex Pro Smartwatch' }}</span>
+    </nav>
+
+    <div class="grid grid-cols-2" style="align-items: start; gap: clamp(36px, 6vw, 64px);">
+      
+      <!-- Left: Product Media Gallery -->
+      <div class="product-gallery">
+        <div class="product-gallery__main" style="position: relative; border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--border-subtle); background: var(--bg-card); box-shadow: var(--shadow-lg); margin-bottom: 16px;">
+          <img
+            id="ProductGalleryMainImage"
+            src="{{ product.featured_image | default: 'watch-apex-pro.jpg' | asset_url }}"
+            alt="{{ product.title | default: 'Kinetix Apex Pro Smartwatch' | escape }}"
+            style="width: 100%; aspect-ratio: 1/1; object-fit: cover;"
+            width="800"
+            height="800"
+          >
+          <span class="badge badge-sale" style="position: absolute; top: 18px; left: 18px;">SAVE $80 (LIMITED BATCH)</span>
+        </div>
+
+        <!-- Thumbnails Strip -->
+        <div class="product-gallery__thumbnails" style="display: flex; gap: 12px; overflow-x: auto; padding-bottom: 8px;">
+          <button type="button" class="gallery-thumb-btn active" style="width: 80px; height: 80px; border-radius: var(--radius-md); overflow: hidden; border: 2px solid var(--accent-gold); padding: 0; background: var(--bg-card);">
+            <img src="{{ 'watch-apex-pro.jpg' | asset_url }}" style="width: 100%; height: 100%; object-fit: cover;" alt="Front dial view">
+          </button>
+          <button type="button" class="gallery-thumb-btn" style="width: 80px; height: 80px; border-radius: var(--radius-md); overflow: hidden; border: 2px solid transparent; padding: 0; background: var(--bg-card);">
+            <img src="{{ 'watch-thrux-military.jpg' | asset_url }}" style="width: 100%; height: 100%; object-fit: cover;" alt="Tactical rugged view">
+          </button>
+          <button type="button" class="gallery-thumb-btn" style="width: 80px; height: 80px; border-radius: var(--radius-md); overflow: hidden; border: 2px solid transparent; padding: 0; background: var(--bg-card);">
+            <img src="{{ 'watch-heritage-royale.jpg' | asset_url }}" style="width: 100%; height: 100%; object-fit: cover;" alt="Luxury finish view">
+          </button>
+          <button type="button" class="gallery-thumb-btn" style="width: 80px; height: 80px; border-radius: var(--radius-md); overflow: hidden; border: 2px solid transparent; padding: 0; background: var(--bg-card);">
+            <img src="{{ 'watch-pulse-elite.jpg' | asset_url }}" style="width: 100%; height: 100%; object-fit: cover;" alt="ECG Display view">
+          </button>
+        </div>
+      </div>
+
+      <!-- Right: Product Information & Form -->
+      <div class="product-info-panel">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+          <span class="badge badge-new">Flagship Titanium</span>
+          <div style="display: flex; align-items: center; gap: 4px; color: var(--accent-gold); font-size: 0.85rem;">
+            {%- for i in (1..5) -%}{% render 'icon-star', filled: true %}{%- endfor -%}
+            <span style="color: var(--text-muted); font-size: 0.8rem; margin-left: 4px;">4.98 (842 Reviews)</span>
+          </div>
+        </div>
+
+        <h1 style="font-size: clamp(2.2rem, 3.8vw, 3rem); margin-bottom: 12px; line-height: 1.15;">
+          {{ product.title | default: 'Kinetix Apex Pro Smartwatch' }}
+        </h1>
+
+        <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 24px;">
+          <span style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800; color: var(--text-primary);">$249.00</span>
+          <span style="font-size: 1.3rem; color: var(--text-muted); text-decoration: line-through;">$329.00</span>
+          <span class="badge badge-sale">Save $80 Today</span>
+        </div>
+
+        <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 28px;">
+          {{ product.description | default: 'Crafted with aerospace Grade 5 titanium, scratchproof synthetic sapphire crystal, and an 8-channel BioPulse™ sensor matrix. Delivers 45-day battery runtime, dual-frequency L1+L5 multi-satellite navigation, and 100-meter oceanic waterproof certification.' }}
+        </p>
+
+        <!-- Dynamic Variants Selector -->
+        <div class="product-form__variants" style="margin-bottom: 28px;">
+          <label style="display: block; font-size: 0.88rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; color: var(--text-secondary);">
+            Case & Finish: <span id="product-page-finish-label" style="color: var(--accent-gold);">Stealth Titanium Carbon</span>
+          </label>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <button type="button" class="variant-pill-btn active" data-variant-name="Stealth Titanium Carbon" style="padding: 10px 18px; border-radius: var(--radius-full); background: rgba(255,255,255,0.06); border: 1px solid var(--accent-gold); color: var(--text-primary); font-size: 0.9rem; font-weight: 600;">
+              ⚫ Stealth Carbon Titanium
+            </button>
+            <button type="button" class="variant-pill-btn" data-variant-name="Aero Silver Grade-5" style="padding: 10px 18px; border-radius: var(--radius-full); background: rgba(255,255,255,0.06); border: 1px solid var(--border-subtle); color: var(--text-secondary); font-size: 0.9rem; font-weight: 600;">
+              ⚪ Aero Silver Titanium
+            </button>
+            <button type="button" class="variant-pill-btn" data-variant-name="Desert Tactical Khaki" style="padding: 10px 18px; border-radius: var(--radius-full); background: rgba(255,255,255,0.06); border: 1px solid var(--border-subtle); color: var(--text-secondary); font-size: 0.9rem; font-weight: 600;">
+              🟤 Tactical Khaki
+            </button>
+          </div>
+        </div>
+
+        <!-- Quantity & Add to Cart Action -->
+        <div style="display: flex; gap: 14px; margin-bottom: 20px; flex-wrap: wrap;">
+          <div style="display: flex; align-items: center; border: 1px solid var(--border-subtle); border-radius: var(--radius-full); background: rgba(255,255,255,0.04); padding: 0 8px;">
+            <button type="button" id="qty-minus" style="padding: 12px 16px; font-size: 1.1rem; color: var(--text-secondary);">-</button>
+            <span id="qty-val" style="font-weight: 700; font-size: 1.05rem; padding: 0 12px;">1</span>
+            <button type="button" id="qty-plus" style="padding: 12px 16px; font-size: 1.1rem; color: var(--text-secondary);">+</button>
+          </div>
+
+          <button
+            type="button"
+            class="btn btn-primary btn-lg"
+            style="flex: 1; min-width: 220px;"
+            data-quick-add-btn
+            data-product-title="{{ product.title | default: 'Kinetix Apex Pro Smartwatch' | escape }}"
+            data-product-price="249.00"
+          >
+            <span>Add to Cart — $249</span>
+          </button>
+        </div>
+
+        <a href="/checkout" class="btn btn-secondary btn-full btn-lg" style="margin-bottom: 28px;">
+          <span>Instant Express Checkout</span>
+        </a>
+
+        <!-- Trust Features Matrix -->
+        <div class="glass-card" style="padding: 20px; border-radius: var(--radius-md); display: grid; grid-template-columns: 1fr 1fr; gap: 16px; font-size: 0.85rem; margin-bottom: 32px;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="color: var(--accent-gold);">🛡️</span>
+            <span>2-Year Global Warranty</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="color: #10b981;">✈️</span>
+            <span>Free Express Courier</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="color: var(--accent-gold);">🔄</span>
+            <span>30-Day Risk-Free Returns</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="color: #10b981;">🔋</span>
+            <span>45-Day High Capacity Battery</span>
+          </div>
+        </div>
+
+        <!-- Specifications Accordion Group -->
+        <div class="accordion-group" style="display: flex; flex-direction: column; gap: 12px;">
+          
+          <div class="accordion-item glass-card active" style="border-radius: var(--radius-md); overflow: hidden;">
+            <button type="button" class="accordion-header" style="width: 100%; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; font-weight: 700; color: var(--text-primary);">
+              <span>Engineering & Materials</span>
+              <span class="accordion-icon" style="color: var(--accent-gold);">{% render 'icon-chevron' %}</span>
+            </button>
+            <div class="accordion-content" style="padding: 0 20px 20px 20px; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+              <ul style="list-style: disc; padding-left: 20px; display: flex; flex-direction: column; gap: 6px;">
+                <li>Chassis: Grade-5 Titanium (Ti-6Al-4V) with DLC Diamond-Like Carbon finish</li>
+                <li>Lens: Synthetic Sapphire Crystal (Mohs 9H Hardness)</li>
+                <li>Bezel: Micro-etched tachymeter with phosphorescent indices</li>
+                <li>Weight: 52g (chassis without strap)</li>
+                <li>Dimensions: 46.5mm diameter x 12.2mm thickness</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item glass-card" style="border-radius: var(--radius-md); overflow: hidden;">
+            <button type="button" class="accordion-header" style="width: 100%; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; font-weight: 700; color: var(--text-primary);">
+              <span>Sensors & Biometric Telemetry</span>
+              <span class="accordion-icon" style="color: var(--accent-gold);">{% render 'icon-chevron' %}</span>
+            </button>
+            <div class="accordion-content" style="padding: 0 20px 20px 20px; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+              <ul style="list-style: disc; padding-left: 20px; display: flex; flex-direction: column; gap: 6px;">
+                <li>BioPulse™ 8-channel optical photodiode sensor array</li>
+                <li>Single-lead ECG arrhythmia and HRV heart rate variability analysis</li>
+                <li>SpO2 continuous arterial blood oxygen monitor</li>
+                <li>Dual-frequency L1+L5 GPS (GPS, GLONASS, Galileo, BeiDou, QZSS, NavIC)</li>
+                <li>Barometric altimeter, 3-axis compass & skin temperature sensor</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item glass-card" style="border-radius: var(--radius-md); overflow: hidden;">
+            <button type="button" class="accordion-header" style="width: 100%; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; font-weight: 700; color: var(--text-primary);">
+              <span>What's In The Box</span>
+              <span class="accordion-icon" style="color: var(--accent-gold);">{% render 'icon-chevron' %}</span>
+            </button>
+            <div class="accordion-content" style="padding: 0 20px 20px 20px; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+              <ul style="list-style: disc; padding-left: 20px; display: flex; flex-direction: column; gap: 6px;">
+                <li>1x Kinetix Apex Pro Titanium Smartwatch</li>
+                <li>1x Fluoroelastomer Tactical Strap (22mm quick-release)</li>
+                <li>1x Magnetic High-Speed Fast Charging Cable (USB-C)</li>
+                <li>1x Titanium Authentication & 2-Year Global Warranty Card</li>
+                <li>1x Operator Quick Start Manual</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Gallery thumbnail switcher
+  const thumbs = document.querySelectorAll('.gallery-thumb-btn');
+  const mainImg = document.getElementById('ProductGalleryMainImage');
+  thumbs.forEach(t => {
+    t.addEventListener('click', () => {
+      thumbs.forEach(el => {
+        el.classList.remove('active');
+        el.style.borderColor = 'transparent';
+      });
+      t.classList.add('active');
+      t.style.borderColor = 'var(--accent-gold)';
+      const img = t.querySelector('img');
+      if (img && mainImg) {
+        mainImg.src = img.src;
+      }
+    });
+  });
+
+  // Variant selector pills
+  const pills = document.querySelectorAll('.variant-pill-btn');
+  const label = document.getElementById('product-page-finish-label');
+  pills.forEach(p => {
+    p.addEventListener('click', () => {
+      pills.forEach(el => {
+        el.classList.remove('active');
+        el.style.borderColor = 'var(--border-subtle)';
+        el.style.color = 'var(--text-secondary)';
+      });
+      p.classList.add('active');
+      p.style.borderColor = 'var(--accent-gold)';
+      p.style.color = 'var(--text-primary)';
+      if (label) {
+        label.textContent = p.getAttribute('data-variant-name');
+      }
+    });
+  });
+
+  // Quantity counter
+  const minus = document.getElementById('qty-minus');
+  const plus = document.getElementById('qty-plus');
+  const val = document.getElementById('qty-val');
+  let count = 1;
+  if (minus && plus && val) {
+    minus.addEventListener('click', () => {
+      if (count > 1) { count--; val.textContent = count; }
+    });
+    plus.addEventListener('click', () => {
+      count++; val.textContent = count;
+    });
+  }
+});
+</script>
+
+{% schema %}
+{
+  "name": "Main Product",
+  "settings": []
+}
+{% endschema %}

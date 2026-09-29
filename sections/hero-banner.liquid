@@ -1,0 +1,160 @@
+<section class="hero-section" id="HeroSection-{{ section.id }}">
+  <div class="hero-glow"></div>
+  <div class="container">
+    <div class="hero-grid">
+      <!-- Left Content -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--accent-gold); box-shadow: 0 0 10px var(--accent-gold);"></span>
+          <span>{{ section.settings.badge_text | default: '2026 APEX SERIES • MIL-SPEC 810H CERTIFIED' }}</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="text-gradient">{{ section.settings.heading_highlight | default: 'AEROSPACE GRADE' }}</span><br>
+          <span>{{ section.settings.heading_main | default: 'SMART HOROLOGY' }}</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          {{ section.settings.subheading | default: 'Engineered for extreme resilience and supreme precision. Featuring Grade-5 Titanium chassis, scratchproof sapphire dial, dual-frequency multi-satellite GPS, and an unmatched 45-day battery endurance.' }}
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="{{ section.settings.primary_button_url | default: '/products/kinetix-apex-pro' }}" class="btn btn-primary btn-lg">
+            <span>{{ section.settings.primary_button_text | default: 'Discover Apex Pro' }}</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="{{ section.settings.secondary_button_url | default: '/collections/all' }}" class="btn btn-secondary btn-lg">
+            <span>{{ section.settings.secondary_button_text | default: 'View Watch Catalog' }}</span>
+          </a>
+        </div>
+
+        <!-- Metric Specs Matrix Strip -->
+        <div class="hero-stats">
+          <div class="hero-stat-item">
+            <div style="font-size: 1.6rem; font-weight: 800; font-family: var(--font-heading); color: var(--accent-gold);">10 ATM</div>
+            <div style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">100m Submersible</div>
+          </div>
+          <div style="width: 1px; height: 36px; background: var(--border-subtle);"></div>
+          <div class="hero-stat-item">
+            <div style="font-size: 1.6rem; font-weight: 800; font-family: var(--font-heading); color: var(--text-primary);">45 Days</div>
+            <div style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Battery Life</div>
+          </div>
+          <div style="width: 1px; height: 36px; background: var(--border-subtle);"></div>
+          <div class="hero-stat-item">
+            <div style="font-size: 1.6rem; font-weight: 800; font-family: var(--font-heading); color: var(--accent-gold);">170+</div>
+            <div style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Tactical Sports</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Watch Visual Presentation -->
+      <div class="hero-visual" style="position: relative; display: flex; justify-content: center; align-items: center;">
+        <div class="hero-watch-glow" style="position: absolute; width: 420px; height: 420px; background: radial-gradient(circle, rgba(16, 185, 129, 0.22) 0%, rgba(245, 158, 11, 0.15) 50%, transparent 70%); border-radius: 50%; filter: blur(50px); animation: pulseGlow 4s ease-in-out infinite alternate;"></div>
+        
+        <div class="hero-image-wrapper" style="position: relative; z-index: 2; max-width: 480px; transform: perspective(1000px) rotateY(-8deg) rotateX(4deg); transition: transform 0.6s ease;">
+          <img
+            src="{{ 'watch-apex-pro.jpg' | asset_url }}"
+            alt="Kinetix Apex Pro Smartwatch"
+            style="width: 100%; border-radius: var(--radius-xl); box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(245, 158, 11, 0.2); border: 1px solid rgba(255, 255, 255, 0.1);"
+            width="600"
+            height="600"
+          >
+
+          <!-- Floating Spec Badges -->
+          <div class="glass-card" style="position: absolute; bottom: -20px; left: -20px; padding: 12px 20px; display: flex; align-items: center; gap: 12px; z-index: 3; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(245, 158, 11, 0.15); display: flex; align-items: center; justify-content: center; color: var(--accent-gold);">
+              {% render 'icon-shield' %}
+            </div>
+            <div>
+              <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);">Grade 5 Titanium</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">DLC Diamond Coated</div>
+            </div>
+          </div>
+
+          <div class="glass-card" style="position: absolute; top: 20px; right: -20px; padding: 12px 20px; display: flex; align-items: center; gap: 12px; z-index: 3; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(16, 185, 129, 0.15); display: flex; align-items: center; justify-content: center; color: var(--accent-emerald);">
+              {% render 'icon-heart' %}
+            </div>
+            <div>
+              <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);">BioPulse™ ECG</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">Real-time SpO2 + HR</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+@keyframes pulseGlow {
+  0% { transform: scale(0.9); opacity: 0.6; }
+  100% { transform: scale(1.15); opacity: 1; }
+}
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+  .hero-content { max-width: 100%; margin: 0 auto; }
+  .hero-cta-group { justify-content: center; }
+  .hero-stats { justify-content: center; }
+  .hero-visual { order: -1; }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Hero Banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge Text",
+      "default": "2026 APEX SERIES • MIL-SPEC 810H CERTIFIED"
+    },
+    {
+      "type": "text",
+      "id": "heading_highlight",
+      "label": "Heading Highlight",
+      "default": "AEROSPACE GRADE"
+    },
+    {
+      "type": "text",
+      "id": "heading_main",
+      "label": "Heading Main",
+      "default": "SMART HOROLOGY"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Engineered for extreme resilience and supreme precision. Featuring Grade-5 Titanium chassis, scratchproof sapphire dial, dual-frequency multi-satellite GPS, and an unmatched 45-day battery endurance."
+    },
+    {
+      "type": "text",
+      "id": "primary_button_text",
+      "label": "Primary Button Text",
+      "default": "Discover Apex Pro"
+    },
+    {
+      "type": "url",
+      "id": "primary_button_url",
+      "label": "Primary Button URL"
+    },
+    {
+      "type": "text",
+      "id": "secondary_button_text",
+      "label": "Secondary Button Text",
+      "default": "View Watch Catalog"
+    },
+    {
+      "type": "url",
+      "id": "secondary_button_url",
+      "label": "Secondary Button URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Banner"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,39 @@
+{
+  "general": {
+    "accessibility": {
+      "skip_to_text": "Skip to content",
+      "close_modal": "Close dialog",
+      "star_rating": "{{ count }} out of 5 stars"
+    },
+    "search": {
+      "search": "Search telemetry...",
+      "submit": "Search",
+      "results_with_count": {
+        "one": "{{ count }} result found",
+        "other": "{{ count }} results found"
+      }
+    }
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Add to Cart",
+      "sold_out": "Sold Out",
+      "unavailable": "Unavailable",
+      "on_sale": "Sale",
+      "save_html": "Save {{ saved_amount }}",
+      "quantity": "Quantity",
+      "in_stock": "In Stock — Ready for Priority Dispatch"
+    }
+  },
+  "cart": {
+    "general": {
+      "title": "Tactical Cart",
+      "subtotal": "Subtotal",
+      "checkout": "Checkout",
+      "empty": "Your cart is empty",
+      "continue_browsing": "Explore Watch Catalog",
+      "remove": "Remove item",
+      "free_shipping": "Free Worldwide Express Courier"
+    }
+  }
+}

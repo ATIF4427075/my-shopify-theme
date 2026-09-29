@@ -1,0 +1,107 @@
+{%- comment -%}
+  Product Card Snippet - Kinetix Pro Luxury High-Tech Smartwatches
+  Usage: {% render 'product-card', product: product, show_vendor: true, show_rating: true %}
+{%- endcomment -%}
+
+{%- liquid
+  assign featured_media = product.featured_media | default: product.featured_image
+  assign secondary_media = product.media[1]
+  assign on_sale = false
+  if product.compare_at_price > product.price
+    assign on_sale = true
+    assign discount_calc = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round
+  endif
+-%}
+
+<div class="product-card" data-product-id="{{ product.id }}" data-product-handle="{{ product.handle }}">
+  <div class="product-card__image-wrapper">
+    <div class="product-card__badges">
+      {%- if on_sale -%}
+        <span class="badge badge-sale">-{{ discount_calc }}% OFF</span>
+      {%- endif -%}
+      {%- if product.tags contains 'mil-spec' or product.tags contains 'rugged' -%}
+        <span class="badge badge-featured">MIL-SPEC</span>
+      {%- elsif product.tags contains 'flagship' or product.tags contains 'new' -%}
+        <span class="badge badge-new">APEX TECH</span>
+      {%- endif -%}
+    </div>
+
+    <div class="product-card__actions">
+      <button type="button" class="btn-icon" data-quick-view data-product-handle="{{ product.handle }}" aria-label="Quick preview of {{ product.title }}">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+          <circle cx="12" cy="12" r="3"></circle>
+        </svg>
+      </button>
+      <button type="button" class="btn-icon" data-wishlist-toggle aria-label="Save to Wishlist">
+        {% render 'icon-heart' %}
+      </button>
+    </div>
+
+    <a href="{{ product.url }}" class="product-card__image-link" tabindex="-1">
+      {%- if featured_media != blank -%}
+        <img
+          src="{{ featured_media | image_url: width: 600 }}"
+          alt="{{ featured_media.alt | default: product.title | escape }}"
+          class="product-card__image product-card__image--primary"
+          loading="lazy"
+          width="600"
+          height="750"
+        >
+        {%- if secondary_media != blank -%}
+          <img
+            src="{{ secondary_media | image_url: width: 600 }}"
+            alt="{{ secondary_media.alt | default: product.title | escape }}"
+            class="product-card__image product-card__image--secondary"
+            loading="lazy"
+            width="600"
+            height="750"
+          >
+        {%- endif -%}
+      {%- else -%}
+        <div class="product-card__placeholder">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+      {%- endif -%}
+    </a>
+
+    <div class="product-card__quick-add">
+      <button
+        type="button"
+        class="btn btn-primary btn-sm btn-full"
+        data-quick-add-btn
+        data-product-id="{{ product.selected_or_first_available_variant.id }}"
+        data-product-title="{{ product.title | escape }}"
+        data-product-price="{{ product.price | money_without_currency }}"
+      >
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        <span>Quick Add</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="product-card__content">
+    {%- if show_vendor -%}
+      <div class="product-card__vendor">{{ product.vendor | default: 'Kinetix Pro' }}</div>
+    {%- endif -%}
+
+    <h3 class="product-card__title">
+      <a href="{{ product.url }}">{{ product.title }}</a>
+    </h3>
+
+    {%- if show_rating -%}
+      <div class="product-card__rating">
+        <div class="rating-stars" style="display:flex; gap:2px; color:var(--accent-gold);">
+          {%- for i in (1..5) -%}
+            {% render 'icon-star', filled: true %}
+          {%- endfor -%}
+        </div>
+        <span class="rating-text" style="font-size:0.8rem; color:var(--text-muted); margin-left:4px;">(4.9)</span>
+      </div>
+    {%- endif -%}
+
+    <div class="product-card__price-wrapper">
+      {% render 'price', product: product %}
+    </div>
+  </div>
+</div>

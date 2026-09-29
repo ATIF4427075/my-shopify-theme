@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-faq-support",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

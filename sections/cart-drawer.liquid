@@ -1,0 +1,116 @@
+<div id="cart-drawer-overlay" class="cart-drawer-overlay"></div>
+
+<div id="cart-drawer" class="cart-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Shopping Cart">
+  <!-- Drawer Header -->
+  <div class="cart-drawer__header">
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin: 0;">Tactical Cart</h3>
+      <span class="cart-count-badge" style="position: static; display: inline-flex;">{{ cart.item_count }}</span>
+    </div>
+    <button type="button" class="btn-icon" data-cart-drawer-close aria-label="Close cart">
+      {% render 'icon-close' %}
+    </button>
+  </div>
+
+  <!-- Free Shipping Progress Indicator -->
+  {%- assign shipping_threshold = 15000 -%}
+  {%- assign current_total = cart.total_price -%}
+  <div class="cart-drawer__shipping" style="padding: 16px 24px; background: rgba(245, 158, 11, 0.06); border-bottom: 1px solid var(--border-subtle);">
+    <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 8px; font-weight: 600;">
+      {%- if current_total >= shipping_threshold -%}
+        <span style="color: #10b981; font-weight: 700;">🎉 Unlocked: Free Worldwide Express Courier!</span>
+      {%- else -%}
+        {%- assign diff = shipping_threshold | minus: current_total -%}
+        <span style="color: var(--text-secondary);">Add <strong style="color: var(--accent-gold);">{{ diff | money }}</strong> more for Free Worldwide Courier</span>
+      {%- endif -%}
+    </div>
+    <div style="width: 100%; height: 6px; background: rgba(255, 255, 255, 0.1); border-radius: 999px; overflow: hidden;">
+      {%- assign percent = current_total | times: 100 | divided_by: shipping_threshold -%}
+      {%- if percent > 100 -%}{%- assign percent = 100 -%}{%- endif -%}
+      <div style="width: {{ percent }}%; height: 100%; background: linear-gradient(90deg, var(--accent-gold), #10b981); transition: width 0.4s ease; border-radius: 999px;"></div>
+    </div>
+  </div>
+
+  <!-- Items List -->
+  <div class="cart-drawer__items" style="flex: 1; overflow-y: auto; padding: 24px; display: flex; flex-direction: column; gap: 20px;">
+    {%- if cart.item_count > 0 -%}
+      {%- for item in cart.items -%}
+        <div class="cart-drawer-item" style="display: flex; gap: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--border-subtle);" data-line-item-key="{{ item.key }}">
+          <img
+            src="{{ item.image | image_url: width: 140 }}"
+            alt="{{ item.title | escape }}"
+            style="width: 72px; height: 72px; object-fit: cover; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);"
+            width="72"
+            height="72"
+          >
+          <div style="flex: 1;">
+            <h4 style="font-size: 0.95rem; margin-bottom: 4px; font-weight: 600;">
+              <a href="{{ item.url }}" style="color: var(--text-primary);">{{ item.product.title }}</a>
+            </h4>
+            {%- unless item.product.has_only_default_variant -%}
+              <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 6px;">{{ item.variant.title }}</div>
+            {%- endunless -%}
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px;">
+              <div style="display: flex; align-items: center; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); background: rgba(255,255,255,0.04);">
+                <button type="button" style="padding: 4px 10px; color: var(--text-secondary);" data-qty-change="minus" data-key="{{ item.key }}">-</button>
+                <span style="font-size: 0.85rem; font-weight: 700; padding: 0 6px;">{{ item.quantity }}</span>
+                <button type="button" style="padding: 4px 10px; color: var(--text-secondary);" data-qty-change="plus" data-key="{{ item.key }}">+</button>
+              </div>
+              <span style="font-weight: 700; color: var(--accent-gold); font-size: 0.95rem;">{{ item.final_line_price | money }}</span>
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+    {%- else -%}
+      <!-- Sample Initial Demo Item / Empty Cart Prompt -->
+      <div id="cart-drawer-demo-item" class="cart-drawer-item" style="display: flex; gap: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--border-subtle);">
+        <img
+          src="{{ 'watch-apex-pro.jpg' | asset_url }}"
+          alt="Kinetix Apex Pro Smartwatch"
+          style="width: 72px; height: 72px; object-fit: cover; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);"
+          width="72"
+          height="72"
+        >
+        <div style="flex: 1;">
+          <h4 style="font-size: 0.95rem; margin-bottom: 4px; font-weight: 600; color: var(--text-primary);">Kinetix Apex Pro Smartwatch</h4>
+          <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 6px;">Finish: Stealth Titanium Carbon</div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px;">
+            <span style="font-size: 0.85rem; color: var(--text-secondary);">Qty: 1</span>
+            <span style="font-weight: 700; color: var(--accent-gold); font-size: 0.95rem;">$249.00</span>
+          </div>
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+
+  <!-- Drawer Footer / Checkout Area -->
+  <div class="cart-drawer__footer" style="padding: 24px; background: rgba(9, 13, 22, 0.95); border-top: 1px solid var(--border-subtle); display: flex; flex-direction: column; gap: 16px;">
+    <div style="display: flex; justify-content: space-between; font-size: 1.1rem; font-weight: 700;">
+      <span style="color: var(--text-secondary);">Estimated Total</span>
+      <span id="cart-drawer-total" style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 1.3rem;">
+        {%- if cart.item_count > 0 -%}{{ cart.total_price | money }}{%- else -%}$249.00{%- endif -%}
+      </span>
+    </div>
+
+    <p style="font-size: 0.78rem; color: var(--text-muted); text-align: center; margin: 0;">
+      Taxes and customs calculated at checkout. Includes 2-Year International Warranty.
+    </p>
+
+    <a href="/checkout" class="btn btn-primary btn-full btn-lg" style="font-weight: 700; letter-spacing: 0.04em;">
+      <span>Proceed to Secure Checkout</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
+
+    <a href="/cart" class="btn btn-outline btn-full btn-sm" style="text-align: center;">
+      <span>View Detailed Cart</span>
+    </a>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Cart Drawer",
+  "settings": []
+}
+{% endschema %}

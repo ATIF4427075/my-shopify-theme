@@ -1,0 +1,137 @@
+<section class="section-spacing" id="Testimonials-{{ section.id }}" style="background: radial-gradient(circle at 50% 100%, rgba(19, 29, 49, 0.6) 0%, rgba(9, 13, 22, 1) 100%);">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">{{ section.settings.subtitle | default: 'Field Telemetry' }}</span>
+      <h2 class="section-title">{{ section.settings.title | default: 'VERIFIED OPERATOR & ATHLETE EXPERIENCES' }}</h2>
+      <p class="section-description">
+        {{ section.settings.description | default: 'Discover how elite ultra-endurance runners, deep-sea divers, and military personnel rely on Kinetix Pro in mission-critical moments.' }}
+      </p>
+    </div>
+
+    <!-- Testimonials Grid -->
+    <div class="grid grid-cols-3">
+      
+      <!-- Review 1 -->
+      <div class="glass-card" style="padding: 32px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="display: flex; gap: 4px; color: var(--accent-gold); margin-bottom: 16px;">
+            {%- for i in (1..5) -%}{% render 'icon-star', filled: true %}{%- endfor -%}
+          </div>
+          <h4 style="font-size: 1.15rem; margin-bottom: 12px; line-height: 1.3;">"Survived 14 Days on Denali in -35°F Without Recharging"</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px;">
+            "The battery life on the Kinetix Apex Pro is phenomenal. In extreme sub-zero conditions where every other lithium device crashed, the titanium chassis and dual-band GPS maintained satellite lock without a hiccup."
+          </p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px; padding-top: 16px; border-top: 1px solid var(--border-subtle);">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--accent-gold), #d97706); display: flex; align-items: center; justify-content: center; font-weight: 800; color: #090d16;">
+            MR
+          </div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem; color: var(--text-primary);">Maj. Marcus Reynolds</div>
+            <div style="font-size: 0.78rem; color: #10b981; display: flex; align-items: center; gap: 4px;">
+              <span>✓ Verified Alpine Expedition Buyer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="glass-card" style="padding: 32px; display: flex; flex-direction: column; justify-content: space-between; border-color: rgba(245,158,11,0.3);">
+        <div>
+          <div style="display: flex; gap: 4px; color: var(--accent-gold); margin-bottom: 16px;">
+            {%- for i in (1..5) -%}{% render 'icon-star', filled: true %}{%- endfor -%}
+          </div>
+          <h4 style="font-size: 1.15rem; margin-bottom: 12px; line-height: 1.3;">"The Heritage Royale Blends Swiss Elegance with Smart Telemetry"</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px;">
+            "As an avid watch collector with pieces from Geneva, I was skeptical about hybrid smartwatches. The rose gold finish and deep teal emerald dial look like a $5,000 Swiss chronometer on my wrist."
+          </p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px; padding-top: 16px; border-top: 1px solid var(--border-subtle);">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #0e7490, #164e63); display: flex; align-items: center; justify-content: center; font-weight: 800; color: #ffffff;">
+            DL
+          </div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem; color: var(--text-primary);">Dr. David Laurent</div>
+            <div style="font-size: 0.78rem; color: #10b981; display: flex; align-items: center; gap: 4px;">
+              <span>✓ Verified Collector Buyer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="glass-card" style="padding: 32px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="display: flex; gap: 4px; color: var(--accent-gold); margin-bottom: 16px;">
+            {%- for i in (1..5) -%}{% render 'icon-star', filled: true %}{%- endfor -%}
+          </div>
+          <h4 style="font-size: 1.15rem; margin-bottom: 12px; line-height: 1.3;">"100M Deep Oceanic Scuba Dive - Flawless Water Resistance"</h4>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px;">
+            "Took the Thrux Tactical GPS down to 75 meters on a deep wreck dive off the Red Sea. The tactile buttons work effortlessly underwater and the high-contrast AMOLED display was crystal clear in murky depths."
+          </p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px; padding-top: 16px; border-top: 1px solid var(--border-subtle);">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #10b981, #047857); display: flex; align-items: center; justify-content: center; font-weight: 800; color: #090d16;">
+            SV
+          </div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem; color: var(--text-primary);">Sarah Van Der Beek</div>
+            <div style="font-size: 0.78rem; color: #10b981; display: flex; align-items: center; gap: 4px;">
+              <span>✓ Verified Master Diver</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Trust Stats Bar -->
+    <div style="margin-top: 56px; padding: 24px 36px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 24px; text-align: center;">
+      <div>
+        <div style="font-size: 2rem; font-weight: 800; font-family: var(--font-heading); color: var(--text-primary);">15,400+</div>
+        <div style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase;">Active Global Operators</div>
+      </div>
+      <div style="width: 1px; height: 40px; background: var(--border-subtle);" class="hidden-mobile"></div>
+      <div>
+        <div style="font-size: 2rem; font-weight: 800; font-family: var(--font-heading); color: var(--accent-gold);">4.96 / 5.0</div>
+        <div style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase;">Customer Satisfaction Score</div>
+      </div>
+      <div style="width: 1px; height: 40px; background: var(--border-subtle);" class="hidden-mobile"></div>
+      <div>
+        <div style="font-size: 2rem; font-weight: 800; font-family: var(--font-heading); color: #10b981;">99.4%</div>
+        <div style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase;">Repurchase & Recommendation</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Testimonials & Reviews",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Field Telemetry"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "VERIFIED OPERATOR & ATHLETE EXPERIENCES"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Discover how elite ultra-endurance runners, deep-sea divers, and military personnel rely on Kinetix Pro in mission-critical moments."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonials & Reviews"
+    }
+  ]
+}
+{% endschema %}

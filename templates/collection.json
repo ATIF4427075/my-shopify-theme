@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-collection",
+      "settings": {}
+    },
+    "specs": {
+      "type": "tech-specs-matrix",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "specs"
+  ]
+}

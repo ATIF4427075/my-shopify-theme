@@ -1,0 +1,149 @@
+<section class="section-spacing" id="FAQSection-{{ section.id }}">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">{{ section.settings.subtitle | default: 'Operator Support' }}</span>
+      <h2 class="section-title">{{ section.settings.title | default: 'FREQUENTLY ASKED QUESTIONS' }}</h2>
+      <p class="section-description">
+        {{ section.settings.description | default: 'Everything you need to know about Kinetix Pro precision hardware, operating telemetry, worldwide warranty, and express courier dispatch.' }}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2" style="align-items: start; gap: clamp(32px, 5vw, 64px);">
+      <!-- Left: FAQ Accordion -->
+      <div class="faq-accordion-group" style="display: flex; flex-direction: column; gap: 16px;">
+        
+        <!-- FAQ Item 1 -->
+        <div class="accordion-item glass-card active" style="overflow: hidden; border-radius: var(--radius-md);">
+          <button type="button" class="accordion-header" style="width: 100%; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; text-align: left; font-family: var(--font-heading); font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">
+            <span>How durable is the Grade 5 Titanium chassis and Sapphire display?</span>
+            <span class="accordion-icon" style="color: var(--accent-gold); transition: transform 0.3s ease;">
+              {% render 'icon-chevron' %}
+            </span>
+          </button>
+          <div class="accordion-content" style="padding: 0 24px 24px 24px; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+            Every Kinetix Apex Pro is CNC-machined from solid aerospace Grade 5 titanium (Ti-6Al-4V), offering the highest strength-to-density ratio of any metallic element. The watch crystal is made of synthetic sapphire with a hardness rating of 9 on the Mohs scale, making it practically scratchproof against sand, rocks, and steel blades.
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="accordion-item glass-card" style="overflow: hidden; border-radius: var(--radius-md);">
+          <button type="button" class="accordion-header" style="width: 100%; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; text-align: left; font-family: var(--font-heading); font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">
+            <span>How does the 10 ATM (100-meter) water resistance work?</span>
+            <span class="accordion-icon" style="color: var(--accent-gold); transition: transform 0.3s ease;">
+              {% render 'icon-chevron' %}
+            </span>
+          </button>
+          <div class="accordion-content" style="padding: 0 24px 24px 24px; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+            The watch utilizes triple-sealed fluorosilicone gaskets and a reinforced acoustic membrane that allows audio transmission while fully withstanding 100 meters (10 bar) of static oceanic hydrostatic pressure. It is fully certified for swimming, high-speed watersports, and scuba diving.
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="accordion-item glass-card" style="overflow: hidden; border-radius: var(--radius-md);">
+          <button type="button" class="accordion-header" style="width: 100%; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; text-align: left; font-family: var(--font-heading); font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">
+            <span>What is included in the 2-Year International Warranty?</span>
+            <span class="accordion-icon" style="color: var(--accent-gold); transition: transform 0.3s ease;">
+              {% render 'icon-chevron' %}
+            </span>
+          </button>
+          <div class="accordion-content" style="padding: 0 24px 24px 24px; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+            All Kinetix Pro watches come standard with our 2-Year Comprehensive Global Guarantee covering sensor calibration, battery degradation below 80%, movement mechanics, and titanium seal integrity. If any defect occurs, we ship a brand new replacement unit via priority courier.
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="accordion-item glass-card" style="overflow: hidden; border-radius: var(--radius-md);">
+          <button type="button" class="accordion-header" style="width: 100%; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; text-align: left; font-family: var(--font-heading); font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">
+            <span>Is the watch compatible with both iOS and Android?</span>
+            <span class="accordion-icon" style="color: var(--accent-gold); transition: transform 0.3s ease;">
+              {% render 'icon-chevron' %}
+            </span>
+          </button>
+          <div class="accordion-content" style="padding: 0 24px 24px 24px; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+            Yes. The Kinetix Pro companion mobile app is available natively for iOS 14+ and Android 9+. It synchronizes with Apple Health, Strava, Google Fit, and Garmin Connect with full end-to-end encrypted biometric telemetry.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right: Direct Support Help Box -->
+      <div class="glass-card" style="padding: 36px; border: 1px solid var(--border-active);">
+        <span class="badge badge-new" style="margin-bottom: 12px;">Direct Priority Desk</span>
+        <h3 style="font-size: 1.6rem; margin-bottom: 12px;">Need Specialized Guidance?</h3>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 24px; line-height: 1.6;">
+          Our technical horologists and field gear specialists are available 24/7 to assist with tactical configurations, enterprise orders, and expedited dispatch.
+        </p>
+
+        <div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(245,158,11,0.15); display: flex; align-items: center; justify-content: center; color: var(--accent-gold);">
+              ✉️
+            </div>
+            <div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">Direct Dispatch Desk</div>
+              <div style="font-weight: 700; color: var(--text-primary);">support@kinetixpro-watches.com</div>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(16,185,129,0.15); display: flex; align-items: center; justify-content: center; color: var(--accent-emerald);">
+              ⏱️
+            </div>
+            <div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">Average Response Speed</div>
+              <div style="font-weight: 700; color: var(--text-primary);">< 15 Minutes (24/7 Global)</div>
+            </div>
+          </div>
+        </div>
+
+        <a href="/pages/support" class="btn btn-primary btn-full">
+          <span>Open Support Portal & Ticket</span>
+          {% render 'icon-arrow' %}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.accordion-item .accordion-content {
+  display: none;
+}
+.accordion-item.active .accordion-content {
+  display: block;
+}
+.accordion-item.active .accordion-icon {
+  transform: rotate(180deg);
+}
+</style>
+
+{% schema %}
+{
+  "name": "FAQ & Support",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Operator Support"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "FREQUENTLY ASKED QUESTIONS"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Everything you need to know about Kinetix Pro precision hardware, operating telemetry, worldwide warranty, and express courier dispatch."
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ & Support"
+    }
+  ]
+}
+{% endschema %}

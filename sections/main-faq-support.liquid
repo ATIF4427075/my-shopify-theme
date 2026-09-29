@@ -1,0 +1,178 @@
+<div class="support-page section-spacing" id="MainFAQSupport-{{ section.id }}">
+  <div class="container">
+    
+    <!-- Hero Support Banner -->
+    <div class="glass-card" style="padding: clamp(40px, 6vw, 64px); text-align: center; margin-bottom: 48px; background: radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.12) 0%, rgba(19, 29, 49, 0.95) 100%);">
+      <span class="section-subtitle">24/7 Global Desk</span>
+      <h1 style="font-size: clamp(2.2rem, 4vw, 3.4rem); margin-bottom: 16px;">
+        KINETIX OPERATOR SUPPORT & FAQS
+      </h1>
+      <p style="max-width: 640px; margin: 0 auto 32px auto; color: var(--text-secondary); font-size: 1.05rem;">
+        Get instant technical assistance, warranty registration, shipping telemetry tracking, and direct access to our engineering team.
+      </p>
+
+      <!-- Quick Search Bar -->
+      <div style="max-width: 500px; margin: 0 auto; position: relative;">
+        <input
+          type="text"
+          class="form-input"
+          id="faq-search-input"
+          placeholder="Search topics: battery, GPS, warranty, 10 ATM, pairing..."
+          style="padding: 16px 24px; padding-left: 50px; border-radius: var(--radius-full); font-size: 1rem; background: rgba(9, 13, 22, 0.85);"
+        >
+        <div style="position: absolute; top: 50%; left: 20px; transform: translateY(-50%); color: var(--accent-gold);">
+          {% render 'icon-search' %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Help Topics Grid -->
+    <div class="grid grid-cols-4" style="margin-bottom: 64px;">
+      
+      <div class="glass-card" style="padding: 24px; text-align: center;">
+        <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(245,158,11,0.15); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto; color: var(--accent-gold);">
+          {% render 'icon-shield' %}
+        </div>
+        <h4 style="font-size: 1.05rem; margin-bottom: 8px;">2-Year Warranty</h4>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 12px;">Full sensor, titanium seal, and battery replacement coverage.</p>
+        <a href="#warranty" style="font-size: 0.82rem; color: var(--accent-gold); font-weight: 700;">Warranty Policy &rarr;</a>
+      </div>
+
+      <div class="glass-card" style="padding: 24px; text-align: center;">
+        <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(16,185,129,0.15); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto; color: var(--accent-emerald);">
+          ✈️
+        </div>
+        <h4 style="font-size: 1.05rem; margin-bottom: 8px;">Shipping Telemetry</h4>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 12px;">Worldwide express courier tracking with 3-5 day dispatch.</p>
+        <a href="#tracking" style="font-size: 0.82rem; color: var(--accent-gold); font-weight: 700;">Track Shipment &rarr;</a>
+      </div>
+
+      <div class="glass-card" style="padding: 24px; text-align: center;">
+        <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(139,92,246,0.15); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto; color: #a78bfa);">
+          📱
+        </div>
+        <h4 style="font-size: 1.05rem; margin-bottom: 8px;">App & Pairing</h4>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 12px;">iOS and Android pairing guide, Strava & Apple Health sync.</p>
+        <a href="#pairing" style="font-size: 0.82rem; color: var(--accent-gold); font-weight: 700;">Pairing Manual &rarr;</a>
+      </div>
+
+      <div class="glass-card" style="padding: 24px; text-align: center;">
+        <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(244,63,94,0.15); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto; color: #fb7185);">
+          🔄
+        </div>
+        <h4 style="font-size: 1.05rem; margin-bottom: 8px;">30-Day Returns</h4>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 12px;">Hassle-free 100% money back trial period on all watches.</p>
+        <a href="#returns" style="font-size: 0.82rem; color: var(--accent-gold); font-weight: 700;">Return Portal &rarr;</a>
+      </div>
+
+    </div>
+
+    <!-- FAQ + Contact Grid -->
+    <div class="grid grid-cols-2" style="align-items: start; gap: clamp(36px, 6vw, 64px);">
+      
+      <!-- FAQ Accordions -->
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <h2 style="font-size: 1.8rem; margin-bottom: 12px;">Frequently Answered Telemetry</h2>
+
+        <div class="accordion-item glass-card active" style="overflow: hidden; border-radius: var(--radius-md);">
+          <button type="button" class="accordion-header" style="width: 100%; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; font-weight: 700; color: var(--text-primary);">
+            <span>How do I pair my Kinetix Pro watch with my phone?</span>
+            <span class="accordion-icon" style="color: var(--accent-gold);">{% render 'icon-chevron' %}</span>
+          </button>
+          <div class="accordion-content" style="padding: 0 24px 24px 24px; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+            Download the official "Kinetix OS" app from the Apple App Store or Google Play Store. Turn on Bluetooth on your device, press and hold the upper titanium crown on your watch for 3 seconds to generate the pairing QR code, and scan it via the app to pair seamlessly.
+          </div>
+        </div>
+
+        <div class="accordion-item glass-card" style="overflow: hidden; border-radius: var(--radius-md);">
+          <button type="button" class="accordion-header" style="width: 100%; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; font-weight: 700; color: var(--text-primary);">
+            <span>How fast is worldwide express dispatch?</span>
+            <span class="accordion-icon" style="color: var(--accent-gold);">{% render 'icon-chevron' %}</span>
+          </button>
+          <div class="accordion-content" style="padding: 0 24px 24px 24px; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+            All orders placed before 3 PM CET are packaged in antistatic shockproof containers and dispatched the same day via DHL Express or FedEx Air. Delivery typically takes 2 to 4 business days to North America, Europe, the Middle East, and Asia-Pacific.
+          </div>
+        </div>
+
+        <div class="accordion-item glass-card" style="overflow: hidden; border-radius: var(--radius-md);">
+          <button type="button" class="accordion-header" style="width: 100%; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; font-weight: 700; color: var(--text-primary);">
+            <span>Can I charge the watch with any standard USB-C charger?</span>
+            <span class="accordion-icon" style="color: var(--accent-gold);">{% render 'icon-chevron' %}</span>
+          </button>
+          <div class="accordion-content" style="padding: 0 24px 24px 24px; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+            Yes, the included high-speed magnetic fast charging dock plugs into any standard USB-C power delivery (PD) adapter. It achieves 80% charge in just 35 minutes and 100% full charge in 55 minutes.
+          </div>
+        </div>
+      </div>
+
+      <!-- Support Dispatch Form -->
+      <div class="glass-card" style="padding: 36px; border-radius: var(--radius-xl); border: 1px solid var(--border-active);">
+        <span class="badge badge-new" style="margin-bottom: 12px;">Submit Priority Ticket</span>
+        <h3 style="font-size: 1.6rem; margin-bottom: 12px;">Contact VIP Operator Desk</h3>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 24px;">
+          Have questions about specific military gear specs, enterprise bulk inquiries, or technical support? Fill out the ticket below.
+        </p>
+
+        {% form 'contact', class: 'contact-form' %}
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input type="text" name="contact[name]" class="form-input" placeholder="e.g. Marcus Vance" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input type="email" name="contact[email]" class="form-input" placeholder="marcus@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Department / Inquiry Type</label>
+            <select name="contact[department]" class="form-select">
+              <option value="technical">Technical Support & Telemetry</option>
+              <option value="warranty">2-Year Warranty Claim</option>
+              <option value="shipping">Order Tracking & Dispatch</option>
+              <option value="press">Press & Tactical Enterprise</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Message Details</label>
+            <textarea name="contact[body]" class="form-textarea" rows="4" placeholder="Describe your inquiry..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full btn-lg">
+            <span>Dispatch Support Ticket</span>
+            {% render 'icon-arrow' %}
+          </button>
+        {% endform %}
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.getElementById('faq-search-input');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase();
+      document.querySelectorAll('.accordion-item').forEach(item => {
+        const text = item.textContent.toLowerCase();
+        if (text.includes(q)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  }
+});
+</script>
+
+{% schema %}
+{
+  "name": "Main FAQ Support",
+  "settings": []
+}
+{% endschema %}

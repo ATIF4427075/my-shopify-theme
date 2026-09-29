@@ -1,0 +1,21 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-about",
+      "settings": {}
+    },
+    "heritage": {
+      "type": "brand-heritage",
+      "settings": {}
+    },
+    "testimonials": {
+      "type": "testimonials-reviews",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "heritage",
+    "testimonials"
+  ]
+}

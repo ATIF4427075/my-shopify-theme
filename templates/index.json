@@ -1,0 +1,87 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-banner",
+      "settings": {
+        "badge_text": "2026 APEX SERIES • MIL-SPEC 810H CERTIFIED",
+        "heading_highlight": "AEROSPACE GRADE",
+        "heading_main": "SMART HOROLOGY",
+        "subheading": "Engineered for extreme resilience and supreme precision. Featuring Grade-5 Titanium chassis, scratchproof sapphire dial, dual-frequency multi-satellite GPS, and an unmatched 45-day battery endurance.",
+        "primary_button_text": "Discover Apex Pro",
+        "primary_button_url": "/products/kinetix-apex-pro",
+        "secondary_button_text": "View Watch Catalog",
+        "secondary_button_url": "/collections/all"
+      }
+    },
+    "collections": {
+      "type": "featured-collections",
+      "settings": {
+        "subtitle": "The Kinetix Lineup",
+        "title": "ENGINEERED FOR EVERY DISCIPLINE",
+        "description": "Explore four pinnacle tiers of high-performance wearable technology, built with aerospace materials and laboratory-calibrated sensors."
+      }
+    },
+    "showcase": {
+      "type": "product-showcase",
+      "settings": {
+        "heading": "Kinetix Apex Pro"
+      }
+    },
+    "products": {
+      "type": "featured-products",
+      "settings": {
+        "subtitle": "Precision Gear",
+        "title": "TACTICAL & HOROLOGY BEST SELLERS",
+        "description": "Tested under simulated sub-zero polar storms, high-altitude drops, and deep oceanic pressures."
+      }
+    },
+    "specs": {
+      "type": "tech-specs-matrix",
+      "settings": {
+        "subtitle": "Telemetry & Engineering",
+        "title": "FLAGSHIP SPECIFICATIONS COMPARISON",
+        "description": "Direct side-by-side engineering telemetry metrics across the Kinetix Pro model series."
+      }
+    },
+    "heritage": {
+      "type": "brand-heritage",
+      "settings": {
+        "subtitle": "Engineering Heritage",
+        "heading": "WHERE SWISS HOROLOGY MEETS AEROSPACE TELEMETRY"
+      }
+    },
+    "testimonials": {
+      "type": "testimonials-reviews",
+      "settings": {
+        "subtitle": "Field Telemetry",
+        "title": "VERIFIED OPERATOR & ATHLETE EXPERIENCES",
+        "description": "Discover how elite ultra-endurance runners, deep-sea divers, and military personnel rely on Kinetix Pro in mission-critical moments."
+      }
+    },
+    "faq": {
+      "type": "faq-support",
+      "settings": {
+        "subtitle": "Operator Support",
+        "title": "FREQUENTLY ASKED QUESTIONS",
+        "description": "Everything you need to know about Kinetix Pro precision hardware, operating telemetry, worldwide warranty, and express courier dispatch."
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "heading": "JOIN THE KINETIX INNER CIRCLE"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "collections",
+    "showcase",
+    "products",
+    "specs",
+    "heritage",
+    "testimonials",
+    "faq",
+    "newsletter"
+  ]
+}

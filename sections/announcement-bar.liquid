@@ -1,0 +1,64 @@
+{%- if section.settings.show_announcement -%}
+<div class="announcement-bar" role="region" aria-label="Announcement">
+  <div class="container">
+    <div class="announcement-bar__inner">
+      <div class="announcement-bar__item announcement-bar__item--left hidden-mobile" style="font-size: 0.8rem; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
+        <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #10b981; box-shadow: 0 0 8px #10b981;"></span>
+        <span>{{ section.settings.left_ticker | default: 'Global Dispatch Available • 2-Year International Warranty' }}</span>
+      </div>
+
+      <div class="announcement-bar__message">
+        <span class="announcement-bar__icon">⚡</span>
+        <span>{{ section.settings.announcement_text | default: 'LIMITED TIME: Free Worldwide Express Courier on all orders over $150' }}</span>
+        {%- if section.settings.link_url != blank -%}
+          <a href="{{ section.settings.link_url }}" class="announcement-bar__link" style="color: var(--accent-gold); text-decoration: underline; margin-left: 6px; font-weight: 700;">
+            {{ section.settings.link_text | default: 'Claim Offer &rarr;' }}
+          </a>
+        {%- endif -%}
+      </div>
+
+      <div class="announcement-bar__item announcement-bar__item--right hidden-mobile" style="font-size: 0.8rem; display: flex; align-items: center; gap: 16px;">
+        <span style="color: var(--text-secondary);">24/7 VIP Tactical Desk</span>
+        <span style="color: var(--accent-gold); font-weight: 700;">USD ($)</span>
+      </div>
+    </div>
+  </div>
+</div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Announcement Bar",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_announcement",
+      "label": "Show Announcement",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "announcement_text",
+      "label": "Announcement Text",
+      "default": "LIMITED TIME: Free Worldwide Express Courier on all orders over $150"
+    },
+    {
+      "type": "text",
+      "id": "left_ticker",
+      "label": "Left Info",
+      "default": "Global Dispatch Available • 2-Year International Warranty"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link Text",
+      "default": "Claim Offer →"
+    }
+  ]
+}
+{% endschema %}

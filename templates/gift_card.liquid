@@ -1,0 +1,30 @@
+{% layout none %}
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Kinetix Pro Gift Card Voucher</title>
+    {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'custom.css' | asset_url | stylesheet_tag }}
+  </head>
+  <body class="theme-dark-mode" style="display:flex; align-items:center; justify-content:center; min-height:100vh; padding:24px;">
+    <div class="glass-card" style="max-width:540px; width:100%; padding:48px; text-align:center; border:1px solid var(--border-active);">
+      <span class="badge badge-new" style="margin-bottom:16px;">OFFICIAL GIFT VOUCHER</span>
+      <h1 style="font-size:2rem; margin-bottom:12px;">Kinetix Pro Smartwatches</h1>
+      <p style="color:var(--text-secondary); margin-bottom:28px;">Redeem towards any titanium smartwatch or tactical field equipment.</p>
+      
+      <div style="background:rgba(255,255,255,0.06); padding:20px; border-radius:var(--radius-md); font-family:monospace; font-size:1.4rem; letter-spacing:0.15em; color:var(--accent-gold); margin-bottom:24px;">
+        {{ gift_card.code | format_code }}
+      </div>
+
+      <div style="font-size:1.8rem; font-weight:800; margin-bottom:28px;">
+        {{ gift_card.initial_value | money_with_currency }}
+      </div>
+
+      <a href="{{ shop.url }}" class="btn btn-primary btn-full">
+        <span>Shop The Collection</span>
+      </a>
+    </div>
+  </body>
+</html>
