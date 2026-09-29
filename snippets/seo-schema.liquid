@@ -1,0 +1,46 @@
+{%- comment -%}
+  SEO & Schema.org JSON-LD Structured Data for Google Rich Results
+{%- endcomment -%}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ shop.name | escape }}",
+  "url": "{{ shop.url }}",
+  {%- if settings.logo != blank -%}
+    "logo": "{{ settings.logo | image_url: width: 500 }}",
+  {%- endif -%}
+  "sameAs": [
+    "{{ settings.social_instagram_link }}",
+    "{{ settings.social_youtube_link }}",
+    "{{ settings.social_twitter_link }}"
+  ]
+}
+</script>
+
+{%- if template.name == 'product' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": {{ product.title | json }},
+  "url": "{{ shop.url }}{{ product.url }}",
+  "image": [
+    "{{ product.featured_image | image_url: width: 800 }}"
+  ],
+  "description": {{ product.description | strip_html | truncatewords: 60 | json }},
+  "brand": {
+    "@type": "Brand",
+    "name": {{ product.vendor | default: shop.name | json }}
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": {{ cart.currency.iso_code | json }},
+    "price": "{{ product.selected_or_first_available_variant.price | money_without_currency | remove: ',' }}",
+    "availability": "https://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}",
+    "itemCondition": "https://schema.org/NewCondition"
+  }
+}
+</script>
+{%- endif -%}

@@ -1,0 +1,47 @@
+<div class="customer-account section-spacing">
+  <div class="container">
+    <div class="section-header text-left">
+      <span class="section-subtitle">Operator Profile</span>
+      <h1 class="section-title">MY ACCOUNT & ORDERS</h1>
+    </div>
+
+    <div class="grid grid-cols-2" style="gap: 40px; align-items: start;">
+      <div class="glass-card" style="padding: 32px;">
+        <h3 style="margin-bottom: 16px;">Order History</h3>
+        {%- if customer.orders.size > 0 -%}
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Order</th>
+                <th>Date</th>
+                <th>Payment</th>
+                <th>Status</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              {%- for order in customer.orders -%}
+                <tr>
+                  <td>{{ order.name }}</td>
+                  <td>{{ order.created_at | date: '%b %d, %Y' }}</td>
+                  <td>{{ order.financial_status_label }}</td>
+                  <td>{{ order.fulfillment_status_label }}</td>
+                  <td>{{ order.total_price | money }}</td>
+                </tr>
+              {%- endfor -%}
+            </tbody>
+          </table>
+        {%- else -%}
+          <p style="color: var(--text-secondary);">No orders placed yet.</p>
+        {%- endif -%}
+      </div>
+
+      <div class="glass-card" style="padding: 32px; border: 1px solid var(--border-active);">
+        <h3 style="margin-bottom: 16px;">Account Details</h3>
+        <p style="font-weight: 700; color: var(--text-primary);">{{ customer.name }}</p>
+        <p style="color: var(--text-secondary); margin-bottom: 20px;">{{ customer.email }}</p>
+        <a href="{{ routes.account_logout_url }}" class="btn btn-outline btn-sm">Log Out</a>
+      </div>
+    </div>
+  </div>
+</div>

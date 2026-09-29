@@ -1,0 +1,62 @@
+<div class="contact-page section-spacing" id="MainContact-{{ section.id }}">
+  <div class="container" style="max-width: 900px;">
+    <div class="section-header">
+      <span class="section-subtitle">24/7 Global Operator Support</span>
+      <h1 class="section-title">CONTACT & WHATSAPP SUPPORT</h1>
+    </div>
+
+    <div class="grid grid-cols-2" style="gap: 36px; align-items: start;">
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div class="glass-card" style="padding: 28px; border-color: #25d366;">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+            <span style="font-size: 1.6rem;">💬</span>
+            <h4 style="font-size: 1.1rem; margin: 0;">WhatsApp Live Order Desk</h4>
+          </div>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 16px;">
+            Chat directly with our support team for instant order placement, shipping ETA, and technical advice.
+          </p>
+          <a href="https://wa.me/{{ settings.whatsapp_number | default: '923001234567' | remove: '+' | remove: ' ' }}" target="_blank" class="btn btn-full" style="background: #25d366; color: #fff; font-weight: 700;">
+            <span>Chat on WhatsApp</span> &rarr;
+          </a>
+        </div>
+
+        <div class="glass-card" style="padding: 28px;">
+          <div style="margin-bottom: 14px;">
+            <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Direct Phone Line</div>
+            <div style="font-size: 1.1rem; font-weight: 700; color: var(--text-primary);">{{ settings.contact_phone | default: '+1 (800) 456-8920' }}</div>
+          </div>
+          <div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Technical Desk Email</div>
+            <div style="font-size: 1.1rem; font-weight: 700; color: var(--accent-gold);">{{ settings.contact_email | default: 'support@kinetixpro-watches.com' }}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card" style="padding: 32px; border: 1px solid var(--border-active);">
+        <h3 style="font-size: 1.3rem; margin-bottom: 16px;">Send Priority Message</h3>
+        {% form 'contact' %}
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input type="text" name="contact[name]" class="form-input" placeholder="Marcus Vance" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" name="contact[email]" class="form-input" placeholder="marcus@example.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea name="contact[body]" class="form-textarea" rows="4" placeholder="How can we help?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Dispatch Ticket</button>
+        {% endform %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Main Contact",
+  "settings": []
+}
+{% endschema %}

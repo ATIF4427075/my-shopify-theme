@@ -1,0 +1,26 @@
+<div class="customer-login section-spacing">
+  <div class="container" style="max-width: 480px; margin: 0 auto;">
+    <div class="glass-card" style="padding: 40px; border: 1px solid var(--border-active);">
+      <div style="text-align: center; margin-bottom: 28px;">
+        <span class="badge badge-new" style="margin-bottom: 8px;">OPERATOR ACCESS</span>
+        <h1 style="font-size: 1.8rem; margin: 0;">Sign In</h1>
+      </div>
+
+      {% form 'customer_login' %}
+        {{ form.errors | default_errors }}
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" name="customer[email]" class="form-input" placeholder="user@example.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <input type="password" name="customer[password]" class="form-input" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full btn-lg" style="margin-bottom: 16px;">Sign In</button>
+        <div style="text-align: center; font-size: 0.9rem;">
+          <a href="{{ routes.account_register_url }}" style="color: var(--accent-gold);">Create New Account &rarr;</a>
+        </div>
+      {% endform %}
+    </div>
+  </div>
+</div>

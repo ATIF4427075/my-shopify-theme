@@ -1,0 +1,38 @@
+<div class="policies-page section-spacing" id="MainPolicies-{{ section.id }}">
+  <div class="container" style="max-width: 860px;">
+    <div class="section-header">
+      <span class="section-subtitle">Customer Assurance</span>
+      <h1 class="section-title">STORE POLICIES & TERMS</h1>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 24px;">
+      <div class="glass-card" style="padding: 32px;">
+        <h3 style="color: var(--accent-gold); margin-bottom: 12px;">💵 Payment Methods & Cash on Delivery (COD)</h3>
+        <p style="color: var(--text-secondary); line-height: 1.7;">
+          We accept <strong>Cash on Delivery (COD)</strong>, Credit/Debit Cards, and bank wire transfers. For COD orders, payment is made in cash directly to the courier rider upon package handover.
+        </p>
+      </div>
+
+      <div class="glass-card" style="padding: 32px;">
+        <h3 style="color: var(--accent-gold); margin-bottom: 12px;">✈️ Worldwide Express Shipping</h3>
+        <p style="color: var(--text-secondary); line-height: 1.7;">
+          All orders are dispatched within 24 hours in antistatic shockproof containers via DHL Express or FedEx Air. Delivery timeline is 2 to 4 business days. Free shipping applies to orders over ${{ settings.free_shipping_threshold | default: 150 }}.
+        </p>
+      </div>
+
+      <div class="glass-card" style="padding: 32px;">
+        <h3 style="color: var(--accent-gold); margin-bottom: 12px;">🔄 30-Day Return & 100% Refund Policy</h3>
+        <p style="color: var(--text-secondary); line-height: 1.7;">
+          If you are not 100% satisfied with your timepiece, you may return it within 30 days in original packaging for a full refund or replacement.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Main Policies",
+  "settings": []
+}
+{% endschema %}

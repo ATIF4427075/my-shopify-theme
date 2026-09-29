@@ -1,0 +1,37 @@
+<div class="tracking-page section-spacing" id="MainTracking-{{ section.id }}">
+  <div class="container" style="max-width: 860px;">
+    
+    <div class="glass-card" style="padding: 40px; text-align: center; margin-bottom: 40px; background: radial-gradient(circle at 50% 0%, rgba(245,158,11,0.12) 0%, rgba(19,29,49,0.95) 100%);">
+      <span class="badge badge-new" style="margin-bottom: 12px;">REAL-TIME COURIER TELEMETRY</span>
+      <h1 style="font-size: 2.4rem; margin-bottom: 12px;">Track Your Watch Delivery</h1>
+      <p style="color: var(--text-secondary); max-width: 540px; margin: 0 auto 24px auto;">
+        Enter your Order ID (e.g. <strong style="color:var(--accent-gold);">KP-84920</strong>) or Tracking Number to view live dispatch telemetry.
+      </p>
+
+      <div style="display: flex; gap: 12px; max-width: 500px; margin: 0 auto;">
+        <input type="text" id="shopify-tracking-input" class="form-input" placeholder="Enter Order ID: KP-84920" style="padding: 14px 20px;">
+        <button type="button" class="btn btn-primary btn-lg" onclick="alert('Order lookup active. Telemetry synced with global courier network.')">Track</button>
+      </div>
+    </div>
+
+    <!-- Stepper Demo -->
+    <div class="glass-card" style="padding: 36px; border: 1px solid var(--border-active);">
+      <h3 style="margin-bottom: 24px;">Global Dispatch Telemetry (5 Stages)</h3>
+      <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; text-align: center; font-size: 0.82rem;">
+        <div style="padding: 12px; background: rgba(16,185,129,0.15); border-radius: 8px; color: #10b981; font-weight: 700;">1. Order Verified</div>
+        <div style="padding: 12px; background: rgba(16,185,129,0.15); border-radius: 8px; color: #10b981; font-weight: 700;">2. Cleanroom Pack</div>
+        <div style="padding: 12px; background: rgba(16,185,129,0.15); border-radius: 8px; color: #10b981; font-weight: 700;">3. Air Dispatch</div>
+        <div style="padding: 12px; background: rgba(245,158,11,0.2); border-radius: 8px; color: var(--accent-gold); font-weight: 700;">4. In Transit</div>
+        <div style="padding: 12px; background: rgba(255,255,255,0.05); border-radius: 8px; color: var(--text-muted);">5. Out for Delivery</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Main Tracking",
+  "settings": []
+}
+{% endschema %}

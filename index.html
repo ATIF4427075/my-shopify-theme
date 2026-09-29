@@ -6,8 +6,49 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="#090d16">
     
-    <title>Kinetix Pro | High-Tech Luxury & Military Smartwatches</title>
-    <meta name="description" content="Official store of Kinetix Pro Smartwatches. Grade-5 Titanium, Dual-frequency GPS, Sapphire display, 10 ATM 100M Water Resistance.">
+    <title>Kinetix Pro | Luxury & Military High-Tech Smartwatches</title>
+    <meta name="description" content="Official store of Kinetix Pro Smartwatches. Grade-5 Titanium, Dual-frequency GPS, Sapphire display, 10 ATM 100M Water Resistance, 2-Year International Warranty.">
+    <meta name="keywords" content="smartwatch, military smartwatch, titanium watch, gps watch, fitness tracker, luxury chronograph, waterproof watch">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kinetix Pro | Luxury & Military High-Tech Smartwatches">
+    <meta property="og:description" content="Pinnacle aerospace horology and mission-grade wearable computing. Grade-5 Titanium, 45-day battery, 10 ATM waterproof.">
+    <meta property="og:image" content="assets/watch-apex-pro.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Kinetix Pro | Luxury & Military High-Tech Smartwatches">
+    <meta property="twitter:description" content="Aerospace Titanium & Military GPS Smartwatches.">
+    <meta property="twitter:image" content="assets/watch-apex-pro.jpg">
+
+    <!-- Schema.org Structured Data for Google Indexing -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Kinetix Apex Pro Titanium Smartwatch",
+      "image": "assets/watch-apex-pro.jpg",
+      "description": "Aerospace Grade 5 Titanium smartwatch with synthetic sapphire crystal, dual-frequency GPS, and 100-meter water resistance.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Kinetix Pro"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://kinetixpro-watches.com/products/kinetix-apex-pro",
+        "priceCurrency": "USD",
+        "price": "249.00",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.98",
+        "reviewCount": "842"
+      }
+    }
+    </script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,88 +59,182 @@
     <link rel="stylesheet" href="assets/base.css">
     <link rel="stylesheet" href="assets/custom.css">
 
-    <script>
-      // Asset mapping helper for static preview
-      window.ShopifyThemeAssets = {
-        'watch-apex-pro.jpg': 'assets/watch-apex-pro.jpg',
-        'watch-thrux-military.jpg': 'assets/watch-thrux-military.jpg',
-        'watch-heritage-royale.jpg': 'assets/watch-heritage-royale.jpg',
-        'watch-pulse-elite.jpg': 'assets/watch-pulse-elite.jpg',
-        'engineering-heritage.jpg': 'assets/engineering-heritage.jpg'
-      };
-    </script>
+    <style>
+      /* View Router Styles */
+      .page-view {
+        display: none;
+      }
+      .page-view.active {
+        display: block;
+        animation: pageFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      @keyframes pageFadeIn {
+        from { opacity: 0; transform: translateY(12px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      /* Floating WhatsApp Widget */
+      .whatsapp-floating-btn {
+        position: fixed;
+        bottom: 28px;
+        left: 28px;
+        z-index: 1900;
+        background: #25d366;
+        color: #ffffff;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+      }
+      .whatsapp-floating-btn:hover {
+        transform: scale(1.12) translateY(-3px);
+        box-shadow: 0 12px 30px rgba(37, 211, 102, 0.65);
+        color: #ffffff;
+      }
+      .whatsapp-floating-btn .pulse-ring {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 2px solid #25d366;
+        animation: waPulse 2s infinite;
+      }
+      @keyframes waPulse {
+        0% { transform: scale(1); opacity: 0.8; }
+        100% { transform: scale(1.6); opacity: 0; }
+      }
+      /* Tracking Stepper */
+      .tracking-stepper {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin: 40px 0;
+      }
+      .tracking-stepper::before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        right: 30px;
+        height: 4px;
+        background: rgba(255,255,255,0.1);
+        z-index: 1;
+      }
+      .tracking-step {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        flex: 1;
+      }
+      .step-circle {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: var(--bg-card);
+        border: 2px solid var(--border-subtle);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 12px auto;
+        font-weight: 700;
+        color: var(--text-muted);
+        transition: all 0.3s ease;
+      }
+      .tracking-step.done .step-circle {
+        background: #10b981;
+        border-color: #10b981;
+        color: #090d16;
+        box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+      }
+      .tracking-step.active .step-circle {
+        background: var(--accent-gold);
+        border-color: var(--accent-gold);
+        color: #090d16;
+        box-shadow: 0 0 15px rgba(245, 158, 11, 0.5);
+      }
+    </style>
   </head>
 
   <body class="template-index theme-dark-mode">
 
-    <!-- Top Announcement Bar -->
+    <!-- 1. ANNOUNCEMENT BAR -->
     <div class="announcement-bar" role="region" aria-label="Announcement">
       <div class="container">
         <div class="announcement-bar__inner">
-          <div class="announcement-bar__item announcement-bar__item--left hidden-mobile" style="font-size: 0.8rem; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
+          <div class="announcement-bar__item hidden-mobile" style="font-size: 0.8rem; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
             <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #10b981; box-shadow: 0 0 8px #10b981;"></span>
-            <span>Global Dispatch Available • 2-Year International Warranty</span>
+            <span>Cash on Delivery (COD) Available • 2-Year International Warranty</span>
           </div>
 
           <div class="announcement-bar__message">
             <span class="announcement-bar__icon">⚡</span>
-            <span>LIMITED TIME: Free Worldwide Express Courier on all orders over $150</span>
-            <a href="#showcase" class="announcement-bar__link" style="color: var(--accent-gold); text-decoration: underline; margin-left: 6px; font-weight: 700;">
+            <span>LIMITED TIME: Free Worldwide Express Courier on orders over $150</span>
+            <a href="javascript:void(0)" onclick="navigateTo('shop')" class="announcement-bar__link" style="color: var(--accent-gold); text-decoration: underline; margin-left: 6px; font-weight: 700;">
               Claim Offer &rarr;
             </a>
           </div>
 
-          <div class="announcement-bar__item announcement-bar__item--right hidden-mobile" style="font-size: 0.8rem; display: flex; align-items: center; gap: 16px;">
-            <span style="color: var(--text-secondary);">24/7 VIP Tactical Desk</span>
-            <span style="color: var(--accent-gold); font-weight: 700;">USD ($)</span>
+          <div class="announcement-bar__item hidden-mobile" style="font-size: 0.8rem; display: flex; align-items: center; gap: 16px;">
+            <a href="admin.html" style="color: var(--accent-gold); font-weight: 700; display: flex; align-items: center; gap: 4px;">
+              <span>⚙️ Control Panel (Admin)</span>
+            </a>
+            <span style="color: var(--text-primary); font-weight: 700;">USD ($)</span>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Header Navigation -->
+    <!-- 2. SITE HEADER -->
     <header class="site-header" role="banner">
       <div class="container">
         <div class="site-header__wrapper">
-          <!-- Mobile Nav Trigger -->
-          <button type="button" class="btn-icon mobile-nav-toggle" aria-label="Open navigation menu">
+          <!-- Mobile Nav Toggle -->
+          <button type="button" class="btn-icon mobile-nav-toggle" aria-label="Open navigation menu" onclick="document.querySelector('.mobile-nav-drawer').style.left='0'">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
           </button>
 
           <!-- Logo -->
           <div class="site-header__logo-container">
-            <a href="index.html" class="site-header__logo">
-              <span style="display:inline-flex; align-items:center; justify-content:center; width:32px; height:32px; background:linear-gradient(135deg, var(--accent-gold), #d97706); border-radius:8px; color:#090d16; font-weight:900; font-size:1.1rem; margin-right:4px;">K</span>
+            <a href="javascript:void(0)" onclick="navigateTo('home')" class="site-header__logo">
+              <span style="display:inline-flex; align-items:center; justify-content:center; width:32px; height:32px; background:linear-gradient(135deg, var(--accent-gold), #d97706); border-radius:8px; color:#090d16; font-weight:900; font-size:1.1rem; margin-right:6px;">K</span>
               <span>KINETIX<span class="site-header__logo-sparkle" style="color:var(--accent-gold); font-size:1.4rem;">•</span>PRO</span>
             </a>
           </div>
 
-          <!-- Desktop Navigation Links -->
+          <!-- Desktop Navigation -->
           <nav class="site-nav" role="navigation" aria-label="Main Navigation">
-            <a href="#hero" class="site-nav__link active">Home</a>
-            <a href="#collections" class="site-nav__link">Smartwatches</a>
-            <a href="#products" class="site-nav__link">Military Rugged</a>
-            <a href="#showcase" class="site-nav__link">Apex Series</a>
-            <a href="#heritage" class="site-nav__link">Engineering Heritage</a>
-            <a href="#faq" class="site-nav__link">Support & FAQs</a>
+            <a href="javascript:void(0)" onclick="navigateTo('home')" class="site-nav__link active" data-nav-link="home">Home</a>
+            <a href="javascript:void(0)" onclick="navigateTo('shop')" class="site-nav__link" data-nav-link="shop">Shop All Watches</a>
+            <a href="javascript:void(0)" onclick="navigateTo('tracking')" class="site-nav__link" data-nav-link="tracking">Order Tracking</a>
+            <a href="javascript:void(0)" onclick="navigateTo('about')" class="site-nav__link" data-nav-link="about">About Us</a>
+            <a href="javascript:void(0)" onclick="navigateTo('contact')" class="site-nav__link" data-nav-link="contact">Contact & WhatsApp</a>
+            <a href="javascript:void(0)" onclick="navigateTo('policies')" class="site-nav__link" data-nav-link="policies">Policies & COD</a>
           </nav>
 
-          <!-- Header Action Icons -->
+          <!-- Header Actions -->
           <div class="site-header__actions">
             <!-- Search Trigger -->
-            <button type="button" class="btn-icon" onclick="document.querySelector('#faq input')?.focus(); window.location.hash='faq';" aria-label="Search watches">
-              <svg class="icon icon-search" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <button type="button" class="btn-icon" onclick="navigateTo('shop'); document.getElementById('shop-search-input')?.focus();" aria-label="Search watches">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
             </button>
 
-            <!-- Cart Drawer Button -->
-            <button type="button" class="btn-icon" data-cart-drawer-toggle aria-label="Open shopping cart" style="position: relative;">
-              <svg class="icon icon-cart" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            <!-- Customer Account -->
+            <button type="button" class="btn-icon hidden-mobile" onclick="navigateTo('account')" aria-label="Customer Account">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </button>
+
+            <!-- Cart Drawer Trigger -->
+            <button type="button" class="btn-icon" data-cart-drawer-toggle aria-label="Open Cart" style="position: relative;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
               <span class="cart-count-badge">1</span>
             </button>
 
-            <!-- CTA Header Button -->
-            <a href="#showcase" class="btn btn-primary btn-sm hidden-mobile" style="margin-left: 8px;">
-              <span>Explore Apex Pro</span>
+            <!-- Admin Control Panel Shortcut -->
+            <a href="admin.html" class="btn btn-outline btn-sm hidden-mobile" style="color: var(--accent-gold); border-color: rgba(245,158,11,0.4);">
+              <span>⚙️ Control Panel</span>
             </a>
           </div>
         </div>
@@ -108,684 +243,565 @@
 
     <!-- Mobile Navigation Drawer -->
     <div class="mobile-nav-drawer" style="position:fixed; top:0; left:-100%; width:85%; max-width:360px; height:100vh; background:var(--bg-card); z-index:2000; transition:left var(--transition-smooth); padding:24px; display:flex; flex-direction:column; box-shadow:var(--shadow-lg); border-right:1px solid var(--border-subtle);">
-      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:32px; padding-bottom:16px; border-bottom:1px solid var(--border-subtle);">
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:28px; padding-bottom:16px; border-bottom:1px solid var(--border-subtle);">
         <div class="site-header__logo">
-          <span style="display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; background:var(--accent-gold); border-radius:6px; color:#090d16; font-weight:900; font-size:1rem;">K</span>
-          <span style="font-size:1.3rem;">KINETIX PRO</span>
+          <span style="display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; background:var(--accent-gold); border-radius:6px; color:#090d16; font-weight:900;">K</span>
+          <span style="font-size:1.2rem; margin-left:6px;">KINETIX PRO</span>
         </div>
-        <button type="button" class="btn-icon mobile-nav-close" aria-label="Close navigation menu">
-          <svg class="icon icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
+        <button type="button" class="btn-icon mobile-nav-close" onclick="document.querySelector('.mobile-nav-drawer').style.left='-100%'">✕</button>
       </div>
 
-      <div style="display:flex; flex-direction:column; gap:18px; font-size:1.1rem; font-weight:600;">
-        <a href="#hero" style="color:var(--text-primary);" onclick="document.querySelector('.mobile-nav-drawer').style.left='-100%'">Home</a>
-        <a href="#collections" style="color:var(--text-primary);" onclick="document.querySelector('.mobile-nav-drawer').style.left='-100%'">All Smartwatches</a>
-        <a href="#products" style="color:var(--text-primary);" onclick="document.querySelector('.mobile-nav-drawer').style.left='-100%'">Military Rugged GPS</a>
-        <a href="#showcase" style="color:var(--text-primary);" onclick="document.querySelector('.mobile-nav-drawer').style.left='-100%'">Apex Flagship Series</a>
-        <a href="#heritage" style="color:var(--text-primary);" onclick="document.querySelector('.mobile-nav-drawer').style.left='-100%'">The Kinetix Heritage</a>
-        <a href="#faq" style="color:var(--text-primary);" onclick="document.querySelector('.mobile-nav-drawer').style.left='-100%'">Support & FAQs</a>
-      </div>
-
-      <div style="margin-top:auto; padding-top:24px; border-top:1px solid var(--border-subtle); display:flex; flex-direction:column; gap:12px;">
-        <a href="#showcase" class="btn btn-primary btn-full" onclick="document.querySelector('.mobile-nav-drawer').style.left='-100%'">Shop Apex Pro Smartwatch</a>
-        <p style="font-size:0.82rem; color:var(--text-muted); text-align:center;">2-Year Global Warranty & 24/7 Support</p>
+      <div style="display:flex; flex-direction:column; gap:16px; font-size:1.05rem; font-weight:600;">
+        <a href="javascript:void(0)" onclick="navigateTo('home'); document.querySelector('.mobile-nav-drawer').style.left='-100%'">Home Page</a>
+        <a href="javascript:void(0)" onclick="navigateTo('shop'); document.querySelector('.mobile-nav-drawer').style.left='-100%'">Shop All Watches</a>
+        <a href="javascript:void(0)" onclick="navigateTo('tracking'); document.querySelector('.mobile-nav-drawer').style.left='-100%'">Track Your Order</a>
+        <a href="javascript:void(0)" onclick="navigateTo('about'); document.querySelector('.mobile-nav-drawer').style.left='-100%'">About Us & Heritage</a>
+        <a href="javascript:void(0)" onclick="navigateTo('contact'); document.querySelector('.mobile-nav-drawer').style.left='-100%'">Contact & WhatsApp</a>
+        <a href="javascript:void(0)" onclick="navigateTo('policies'); document.querySelector('.mobile-nav-drawer').style.left='-100%'">Policies, COD & Returns</a>
+        <a href="javascript:void(0)" onclick="navigateTo('account'); document.querySelector('.mobile-nav-drawer').style.left='-100%'">Customer Login / Account</a>
+        <a href="admin.html" style="color:var(--accent-gold); margin-top:8px;">⚙️ Admin Control Panel</a>
       </div>
     </div>
 
-    <!-- Main Content Area -->
+    <!-- MAIN MULTI-VIEW SPA CONTAINER -->
     <main id="MainContent">
       
-      <!-- 1. HERO BANNER SECTION -->
-      <section class="hero-section" id="hero">
-        <div class="hero-glow"></div>
-        <div class="container">
-          <div class="hero-grid">
-            <div class="hero-content">
-              <div class="hero-badge">
-                <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--accent-gold); box-shadow: 0 0 10px var(--accent-gold);"></span>
-                <span>2026 APEX SERIES • MIL-SPEC 810H CERTIFIED</span>
-              </div>
-
-              <h1 class="hero-title">
-                <span class="text-gradient">AEROSPACE GRADE</span><br>
-                <span>SMART HOROLOGY</span>
-              </h1>
-
-              <p class="hero-subtitle">
-                Engineered for extreme resilience and supreme precision. Featuring Grade-5 Titanium chassis, scratchproof sapphire dial, dual-frequency multi-satellite GPS, and an unmatched 45-day battery endurance.
-              </p>
-
-              <div class="hero-cta-group">
-                <a href="#showcase" class="btn btn-primary btn-lg">
-                  <span>Discover Apex Pro</span>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                </a>
-                <a href="#products" class="btn btn-secondary btn-lg">
-                  <span>View Watch Catalog</span>
-                </a>
-              </div>
-
-              <div class="hero-stats">
-                <div class="hero-stat-item">
-                  <div style="font-size: 1.6rem; font-weight: 800; font-family: var(--font-heading); color: var(--accent-gold);">10 ATM</div>
-                  <div style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">100m Submersible</div>
+      <!-- ==========================================
+           PAGE 1: HOME PAGE
+           ========================================== -->
+      <section id="view-home" class="page-view active">
+        <!-- Hero Banner -->
+        <section class="hero-section">
+          <div class="hero-glow"></div>
+          <div class="container">
+            <div class="hero-grid">
+              <div class="hero-content">
+                <div class="hero-badge">
+                  <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--accent-gold); box-shadow: 0 0 10px var(--accent-gold);"></span>
+                  <span>2026 APEX SERIES • MIL-SPEC 810H CERTIFIED</span>
                 </div>
-                <div style="width: 1px; height: 36px; background: var(--border-subtle);"></div>
-                <div class="hero-stat-item">
-                  <div style="font-size: 1.6rem; font-weight: 800; font-family: var(--font-heading); color: var(--text-primary);">45 Days</div>
-                  <div style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Battery Life</div>
-                </div>
-                <div style="width: 1px; height: 36px; background: var(--border-subtle);"></div>
-                <div class="hero-stat-item">
-                  <div style="font-size: 1.6rem; font-weight: 800; font-family: var(--font-heading); color: var(--accent-gold);">170+</div>
-                  <div style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Tactical Sports</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="hero-visual" style="position: relative; display: flex; justify-content: center; align-items: center;">
-              <div class="hero-watch-glow" style="position: absolute; width: 420px; height: 420px; background: radial-gradient(circle, rgba(16, 185, 129, 0.22) 0%, rgba(245, 158, 11, 0.15) 50%, transparent 70%); border-radius: 50%; filter: blur(50px);"></div>
-              
-              <div class="hero-image-wrapper" style="position: relative; z-index: 2; max-width: 480px;">
-                <img
-                  src="assets/watch-apex-pro.jpg"
-                  alt="Kinetix Apex Pro Smartwatch"
-                  style="width: 100%; border-radius: var(--radius-xl); box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(245, 158, 11, 0.2); border: 1px solid rgba(255, 255, 255, 0.1);"
-                  width="600"
-                  height="600"
-                >
-
-                <div class="glass-card" style="position: absolute; bottom: -20px; left: -20px; padding: 12px 20px; display: flex; align-items: center; gap: 12px; z-index: 3; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
-                  <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(245, 158, 11, 0.15); display: flex; align-items: center; justify-content: center; color: var(--accent-gold);">
-                    🛡️
-                  </div>
-                  <div>
-                    <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);">Grade 5 Titanium</div>
-                    <div style="font-size: 0.75rem; color: var(--text-muted);">DLC Diamond Coated</div>
-                  </div>
-                </div>
-
-                <div class="glass-card" style="position: absolute; top: 20px; right: -20px; padding: 12px 20px; display: flex; align-items: center; gap: 12px; z-index: 3; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
-                  <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(16, 185, 129, 0.15); display: flex; align-items: center; justify-content: center; color: var(--accent-emerald);">
-                    ❤️
-                  </div>
-                  <div>
-                    <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);">BioPulse™ ECG</div>
-                    <div style="font-size: 0.75rem; color: var(--text-muted);">Real-time SpO2 + HR</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 2. BENTO GRID FEATURED COLLECTIONS -->
-      <section class="section-spacing" id="collections">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-subtitle">The Kinetix Lineup</span>
-            <h2 class="section-title">ENGINEERED FOR EVERY DISCIPLINE</h2>
-            <p class="section-description">
-              Explore four pinnacle tiers of high-performance wearable technology, built with aerospace materials and laboratory-calibrated sensors.
-            </p>
-          </div>
-
-          <div class="bento-grid" style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px;">
-            <!-- 1. Apex Flagship -->
-            <div class="glass-card bento-card" style="grid-column: span 7; position: relative; overflow: hidden; min-height: 380px; padding: 36px; display: flex; flex-direction: column; justify-content: flex-end; background: linear-gradient(180deg, rgba(19, 29, 49, 0.4) 0%, rgba(9, 13, 22, 0.95) 100%);">
-              <img src="assets/watch-apex-pro.jpg" alt="Apex Titanium Series" style="position: absolute; top: 0; right: 0; width: 60%; height: 100%; object-fit: cover; opacity: 0.85; transition: transform 0.6s ease;" class="bento-img">
-              <div style="position: relative; z-index: 2; max-width: 340px;">
-                <span class="badge badge-new" style="margin-bottom: 12px;">Flagship Tier</span>
-                <h3 style="font-size: 1.8rem; margin-bottom: 8px;">Apex Pro Titanium</h3>
-                <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 18px;">Aerospace Grade-5 Titanium case with dual-satellite telemetry & 100m water resistance.</p>
-                <a href="#showcase" class="btn btn-primary btn-sm">
-                  <span>Explore Collection</span> &rarr;
-                </a>
-              </div>
-            </div>
-
-            <!-- 2. Military Tactical -->
-            <div class="glass-card bento-card" style="grid-column: span 5; position: relative; overflow: hidden; min-height: 380px; padding: 36px; display: flex; flex-direction: column; justify-content: flex-end; background: linear-gradient(180deg, rgba(19, 29, 49, 0.4) 0%, rgba(9, 13, 22, 0.95) 100%);">
-              <img src="assets/watch-thrux-military.jpg" alt="Military Tactical Rugged" style="position: absolute; top: 0; right: 0; width: 70%; height: 100%; object-fit: cover; opacity: 0.8; transition: transform 0.6s ease;" class="bento-img">
-              <div style="position: relative; z-index: 2;">
-                <span class="badge badge-featured" style="margin-bottom: 12px;">MIL-SPEC 810H</span>
-                <h3 style="font-size: 1.6rem; margin-bottom: 8px;">Thrux Tactical GPS</h3>
-                <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 18px;">170+ sports modes, built-in altimeter, barometer & storm alert radar.</p>
-                <button type="button" class="btn btn-secondary btn-sm" data-quick-view data-product-handle="kinetix-thrux-military">
-                  <span>View Rugged Series</span> &rarr;
-                </button>
-              </div>
-            </div>
-
-            <!-- 3. Heritage Royale -->
-            <div class="glass-card bento-card" style="grid-column: span 5; position: relative; overflow: hidden; min-height: 380px; padding: 36px; display: flex; flex-direction: column; justify-content: flex-end; background: linear-gradient(180deg, rgba(19, 29, 49, 0.4) 0%, rgba(9, 13, 22, 0.95) 100%);">
-              <img src="assets/watch-heritage-royale.jpg" alt="Heritage Royale Chronograph" style="position: absolute; top: 0; right: 0; width: 70%; height: 100%; object-fit: cover; opacity: 0.85; transition: transform 0.6s ease;" class="bento-img">
-              <div style="position: relative; z-index: 2;">
-                <span class="badge" style="background: rgba(245, 158, 11, 0.2); color: var(--accent-gold); margin-bottom: 12px;">Horology Luxury</span>
-                <h3 style="font-size: 1.6rem; margin-bottom: 8px;">Heritage Royale</h3>
-                <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 18px;">Rose gold bezel with deep emerald sunray dial & hybrid smart chronograph subdials.</p>
-                <button type="button" class="btn btn-secondary btn-sm" data-quick-view data-product-handle="kinetix-heritage-royale">
-                  <span>View Heritage Series</span> &rarr;
-                </button>
-              </div>
-            </div>
-
-            <!-- 4. Pulse Elite -->
-            <div class="glass-card bento-card" style="grid-column: span 7; position: relative; overflow: hidden; min-height: 380px; padding: 36px; display: flex; flex-direction: column; justify-content: flex-end; background: linear-gradient(180deg, rgba(19, 29, 49, 0.4) 0%, rgba(9, 13, 22, 0.95) 100%);">
-              <img src="assets/watch-pulse-elite.jpg" alt="Pulse Elite Active ECG" style="position: absolute; top: 0; right: 0; width: 60%; height: 100%; object-fit: cover; opacity: 0.85; transition: transform 0.6s ease;" class="bento-img">
-              <div style="position: relative; z-index: 2; max-width: 340px;">
-                <span class="badge" style="background: rgba(16, 185, 129, 0.2); color: #34d399; margin-bottom: 12px;">BioTelemetry 2.0</span>
-                <h3 style="font-size: 1.8rem; margin-bottom: 8px;">Pulse Elite Ultra</h3>
-                <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 18px;">Curved borderless OLED, medical-grade SpO2 pulse sensor, and continuous sleep telemetry.</p>
-                <button type="button" class="btn btn-secondary btn-sm" data-quick-view data-product-handle="kinetix-pulse-elite">
-                  <span>Explore Pulse Series</span> &rarr;
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 3. FLAGSHIP INTERACTIVE PRODUCT SHOWCASE -->
-      <section class="section-spacing" id="showcase" style="background: radial-gradient(circle at 20% 50%, rgba(245, 158, 11, 0.05) 0%, rgba(9, 13, 22, 1) 100%);">
-        <div class="container">
-          <div class="glass-card" style="padding: clamp(24px, 5vw, 56px); border: 1px solid rgba(245, 158, 11, 0.25); position: relative; overflow: hidden;">
-            
-            <div class="grid grid-cols-2" style="align-items: center; gap: clamp(32px, 5vw, 64px);">
-              <!-- Left: Interactive Visual with Hotspots -->
-              <div class="showcase-visual-container" style="position: relative; display: flex; flex-direction: column; align-items: center;">
-                <div style="position: relative; width: 100%; max-width: 480px;">
-                  <img
-                    id="showcase-main-img"
-                    src="assets/watch-apex-pro.jpg"
-                    alt="Kinetix Apex Pro Flagship"
-                    style="width: 100%; border-radius: var(--radius-lg); box-shadow: 0 20px 50px rgba(0,0,0,0.6); border: 1px solid var(--border-subtle);"
-                    width="600"
-                    height="600"
-                  >
-
-                  <!-- Interactive Hotspot 1 -->
-                  <div class="showcase-hotspot" style="position: absolute; top: 28%; left: 36%;" data-tooltip="Synthetic Sapphire Crystal with 9H Mohs Hardness scratch resistance.">
-                    <div class="hotspot-pulse"></div>
-                    <span class="hotspot-dot">1</span>
-                  </div>
-
-                  <!-- Interactive Hotspot 2 -->
-                  <div class="showcase-hotspot" style="position: absolute; top: 48%; right: 18%;" data-tooltip="Dual Rotary Aerospace Titanium Crown & Precision Haptic Feedback Engine.">
-                    <div class="hotspot-pulse"></div>
-                    <span class="hotspot-dot">2</span>
-                  </div>
-
-                  <!-- Interactive Hotspot 3 -->
-                  <div class="showcase-hotspot" style="position: absolute; bottom: 20%; left: 45%;" data-tooltip="Fluoroelastomer Quick-Release 22mm Strap with anti-sweat breathable channels.">
-                    <div class="hotspot-pulse"></div>
-                    <span class="hotspot-dot">3</span>
-                  </div>
-                </div>
-
-                <div class="hotspot-info-box" style="margin-top: 20px; width: 100%; max-width: 480px; padding: 12px 18px; background: rgba(255,255,255,0.04); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--text-secondary); display: flex; align-items: center; gap: 10px;">
-                  <span style="color: var(--accent-gold); font-weight: 700;">💡 Tip:</span>
-                  <span id="hotspot-live-desc">Click any numbered hotspot on the watch to inspect aerospace engineering tolerances.</span>
-                </div>
-              </div>
-
-              <!-- Right: Flagship Product Details & Actions -->
-              <div class="showcase-details">
-                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
-                  <span class="badge badge-new">Flagship Architecture</span>
-                  <div style="display: flex; align-items: center; gap: 4px; color: var(--accent-gold); font-size: 0.85rem;">
-                    ★★★★★
-                    <span style="color: var(--text-muted); font-size: 0.8rem; margin-left: 4px;">4.98 / 5.0 (842 Verified Reviews)</span>
-                  </div>
-                </div>
-
-                <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); margin-bottom: 12px; line-height: 1.1;">
-                  Kinetix Apex Pro
-                </h2>
-
-                <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 20px;">
-                  <span style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: var(--text-primary);">$249.00</span>
-                  <span style="font-size: 1.2rem; color: var(--text-muted); text-decoration: line-through;">$329.00</span>
-                  <span class="badge badge-sale">Save $80 Today</span>
-                </div>
-
-                <p style="font-size: 1rem; color: var(--text-secondary); margin-bottom: 24px; line-height: 1.6;">
-                  The definitive tactical and luxury smart instrument. Built with aerospace Grade 5 titanium, equipped with dual-band 6-satellite positioning, clinical-grade ECG cardiac telemetry, and military drop certification.
+                <h1 class="hero-title">
+                  <span class="text-gradient">AEROSPACE GRADE</span><br>
+                  <span>SMART HOROLOGY</span>
+                </h1>
+                <p class="hero-subtitle">
+                  Engineered for extreme resilience and supreme precision. Grade-5 Titanium chassis, scratchproof sapphire dial, dual-frequency multi-satellite GPS, and 45-day battery endurance.
                 </p>
-
-                <!-- Core Feature Pills -->
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 28px;">
-                  <div style="display: flex; align-items: center; gap: 8px; font-size: 0.88rem;">
-                    <span style="color: var(--accent-emerald);">✓</span>
-                    <span>10 ATM (100M) Waterproof</span>
-                  </div>
-                  <div style="display: flex; align-items: center; gap: 8px; font-size: 0.88rem;">
-                    <span style="color: var(--accent-emerald);">✓</span>
-                    <span>45-Day Ultra Battery</span>
-                  </div>
-                  <div style="display: flex; align-items: center; gap: 8px; font-size: 0.88rem;">
-                    <span style="color: var(--accent-emerald);">✓</span>
-                    <span>170+ Tactical Sports Modes</span>
-                  </div>
-                  <div style="display: flex; align-items: center; gap: 8px; font-size: 0.88rem;">
-                    <span style="color: var(--accent-emerald);">✓</span>
-                    <span>Dual-Band L1+L5 GPS</span>
-                  </div>
-                </div>
-
-                <!-- Color / Finish Selector -->
-                <div style="margin-bottom: 24px;">
-                  <label style="display: block; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; color: var(--text-secondary);">
-                    Finish & Chassis: <span id="selected-finish-name" style="color: var(--accent-gold);">Stealth Titanium Carbon</span>
-                  </label>
-                  <div style="display: flex; gap: 12px;">
-                    <button type="button" class="swatch-btn active" data-finish="Stealth Titanium Carbon" style="width: 36px; height: 36px; border-radius: 50%; background: #1e293b; border: 2px solid var(--accent-gold); box-shadow: 0 0 10px rgba(245,158,11,0.4);" title="Stealth Titanium Carbon"></button>
-                    <button type="button" class="swatch-btn" data-finish="Aero Silver Grade-5" style="width: 36px; height: 36px; border-radius: 50%; background: #94a3b8; border: 2px solid transparent;" title="Aero Silver Grade-5"></button>
-                    <button type="button" class="swatch-btn" data-finish="Tactical Desert Khaki" style="width: 36px; height: 36px; border-radius: 50%; background: #78716c; border: 2px solid transparent;" title="Tactical Desert Khaki"></button>
-                    <button type="button" class="swatch-btn" data-finish="Deep Marine Ocean" style="width: 36px; height: 36px; border-radius: 50%; background: #0e7490; border: 2px solid transparent;" title="Deep Marine Ocean"></button>
-                  </div>
-                </div>
-
-                <!-- Urgency Badge -->
-                <div style="display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: #fb7185; margin-bottom: 24px; padding: 8px 14px; background: rgba(244, 63, 94, 0.1); border-radius: var(--radius-md); border: 1px solid rgba(244, 63, 94, 0.25);">
-                  <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #f43f5e;"></span>
-                  <span>Only 4 units left in stock for priority express delivery.</span>
-                </div>
-
-                <!-- Add to Cart CTAs -->
-                <div style="display: flex; gap: 14px; flex-wrap: wrap;">
-                  <button
-                    type="button"
-                    class="btn btn-primary btn-lg"
-                    style="flex: 1; min-width: 200px;"
-                    data-quick-add-btn
-                    data-product-title="Kinetix Apex Pro Smartwatch"
-                    data-product-price="249.00"
-                  >
-                    <span>Add to Cart — $249</span>
+                <div class="hero-cta-group">
+                  <button type="button" onclick="viewProductDetail('kinetix-apex-pro')" class="btn btn-primary btn-lg">
+                    <span>Discover Apex Pro</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                   </button>
-                  <button type="button" class="btn btn-secondary btn-lg" data-cart-drawer-toggle>
-                    <span>View Cart (1)</span>
+                  <button type="button" onclick="navigateTo('shop')" class="btn btn-secondary btn-lg">
+                    <span>View Watch Catalog</span>
                   </button>
                 </div>
+                <div class="hero-stats">
+                  <div>
+                    <div style="font-size: 1.6rem; font-weight: 800; font-family: var(--font-heading); color: var(--accent-gold);">10 ATM</div>
+                    <div style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase;">100m Submersible</div>
+                  </div>
+                  <div style="width: 1px; height: 36px; background: var(--border-subtle);"></div>
+                  <div>
+                    <div style="font-size: 1.6rem; font-weight: 800; font-family: var(--font-heading); color: var(--text-primary);">45 Days</div>
+                    <div style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase;">Battery Life</div>
+                  </div>
+                  <div style="width: 1px; height: 36px; background: var(--border-subtle);"></div>
+                  <div>
+                    <div style="font-size: 1.6rem; font-weight: 800; font-family: var(--font-heading); color: var(--accent-gold);">170+</div>
+                    <div style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase;">Tactical Sports</div>
+                  </div>
+                </div>
+              </div>
 
-                <div style="margin-top: 18px; font-size: 0.8rem; color: var(--text-muted); display: flex; align-items: center; gap: 16px;">
-                  <span>🛡️ 2-Year Global Warranty</span>
-                  <span>📦 Free Worldwide Express</span>
-                  <span>🔄 30-Day Risk-Free Trial</span>
+              <div class="hero-visual" style="position: relative; display: flex; justify-content: center; align-items: center;">
+                <div class="hero-watch-glow" style="position: absolute; width: 420px; height: 420px; background: radial-gradient(circle, rgba(16, 185, 129, 0.22) 0%, rgba(245, 158, 11, 0.15) 50%, transparent 70%); border-radius: 50%; filter: blur(50px);"></div>
+                <div class="hero-image-wrapper" style="position: relative; z-index: 2; max-width: 480px;">
+                  <img src="assets/watch-apex-pro.jpg" alt="Kinetix Apex Pro Smartwatch" style="width: 100%; border-radius: var(--radius-xl); box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(245, 158, 11, 0.2); border: 1px solid rgba(255, 255, 255, 0.1);">
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        <!-- Featured Collections Bento Grid -->
+        <section class="section-spacing">
+          <div class="container">
+            <div class="section-header">
+              <span class="section-subtitle">The Kinetix Lineup</span>
+              <h2 class="section-title">ENGINEERED FOR EVERY DISCIPLINE</h2>
+            </div>
+            <div class="bento-grid" style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px;">
+              <div class="glass-card" style="grid-column: span 7; position: relative; overflow: hidden; min-height: 360px; padding: 36px; display: flex; flex-direction: column; justify-content: flex-end;">
+                <img src="assets/watch-apex-pro.jpg" style="position: absolute; top: 0; right: 0; width: 60%; height: 100%; object-fit: cover; opacity: 0.85;">
+                <div style="position: relative; z-index: 2; max-width: 320px;">
+                  <span class="badge badge-new" style="margin-bottom: 8px;">Flagship Titanium</span>
+                  <h3 style="font-size: 1.8rem; margin-bottom: 8px;">Apex Pro Series</h3>
+                  <button type="button" onclick="viewProductDetail('kinetix-apex-pro')" class="btn btn-primary btn-sm">Explore Model &rarr;</button>
+                </div>
+              </div>
+              <div class="glass-card" style="grid-column: span 5; position: relative; overflow: hidden; min-height: 360px; padding: 36px; display: flex; flex-direction: column; justify-content: flex-end;">
+                <img src="assets/watch-thrux-military.jpg" style="position: absolute; top: 0; right: 0; width: 65%; height: 100%; object-fit: cover; opacity: 0.85;">
+                <div style="position: relative; z-index: 2;">
+                  <span class="badge badge-featured" style="margin-bottom: 8px;">MIL-SPEC 810H</span>
+                  <h3 style="font-size: 1.6rem; margin-bottom: 8px;">Thrux Military GPS</h3>
+                  <button type="button" onclick="viewProductDetail('kinetix-thrux-military')" class="btn btn-secondary btn-sm">View Rugged &rarr;</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Featured Products Best Sellers -->
+        <section class="section-spacing" style="background: var(--bg-surface);">
+          <div class="container">
+            <div class="section-header">
+              <span class="section-subtitle">Precision Catalog</span>
+              <h2 class="section-title">FEATURED BEST SELLERS</h2>
+            </div>
+            <div class="grid grid-cols-4" id="home-featured-products-grid">
+              <!-- Dynamically rendered by theme.js from StoreDB -->
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- ==========================================
+           PAGE 2: SHOP ALL WATCHES PAGE
+           ========================================== -->
+      <section id="view-shop" class="page-view">
+        <div class="container section-spacing">
+          <div class="glass-card" style="padding: 40px; margin-bottom: 40px; text-align: center; background: radial-gradient(circle at 50% 0%, rgba(245,158,11,0.12) 0%, rgba(19,29,49,0.95) 100%);">
+            <span class="badge badge-new" style="margin-bottom: 12px;">OFFICIAL 2026 CATALOG</span>
+            <h1 style="font-size: 2.6rem; margin-bottom: 12px;">Shop High-Performance Smartwatches</h1>
+            <p style="max-width: 650px; margin: 0 auto; color: var(--text-secondary);">Browse Grade-5 Titanium, Tactical Military GPS, and Luxury Chronograph smartwatches.</p>
+            
+            <!-- Live Search Bar -->
+            <div style="max-width: 500px; margin: 28px auto 0 auto;">
+              <input type="text" id="shop-search-input" class="form-input" placeholder="Search by model, titanium, military, price..." style="padding: 14px 22px; font-size: 1rem; border-radius: var(--radius-full);">
+            </div>
+          </div>
+
+          <!-- Category Filter Pills -->
+          <div style="display: flex; gap: 12px; margin-bottom: 32px; overflow-x: auto; padding-bottom: 8px;" id="shop-category-pills">
+            <button type="button" class="btn btn-primary btn-sm" onclick="filterShopCategory('all', this)">All Watches</button>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="filterShopCategory('tactical-titanium', this)">Apex Titanium</button>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="filterShopCategory('military-rugged', this)">Military Tactical</button>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="filterShopCategory('luxury-chronograph', this)">Luxury Chrono</button>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="filterShopCategory('fitness-health', this)">BioTelemetry Health</button>
+          </div>
+
+          <!-- Products Grid -->
+          <div class="grid grid-cols-4" id="shop-products-grid">
+            <!-- Rendered by JS -->
           </div>
         </div>
       </section>
 
-      <!-- 4. BEST SELLERS GRID -->
-      <section class="section-spacing" id="products">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-subtitle">Precision Gear</span>
-            <h2 class="section-title">TACTICAL & HOROLOGY BEST SELLERS</h2>
-            <p class="section-description">
-              Tested under simulated sub-zero polar storms, high-altitude drops, and deep oceanic pressures.
-            </p>
-          </div>
+      <!-- ==========================================
+           PAGE 3: PRODUCT DETAILS PAGE
+           ========================================== -->
+      <section id="view-product-detail" class="page-view">
+        <div class="container section-spacing">
+          <button type="button" class="btn btn-outline btn-sm" style="margin-bottom: 24px;" onclick="navigateTo('shop')">&larr; Back to Watch Catalog</button>
 
-          <div class="grid grid-cols-4">
-            <!-- Product 1 -->
-            <div class="product-card" data-product-handle="kinetix-apex-pro">
-              <div class="product-card__image-wrapper">
-                <div class="product-card__badges">
-                  <span class="badge badge-sale">-24% OFF</span>
-                  <span class="badge badge-new">APEX TECH</span>
-                </div>
-                <div class="product-card__actions">
-                  <button type="button" class="btn-icon" data-quick-view data-product-handle="kinetix-apex-pro" aria-label="Quick View">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-                  </button>
-                </div>
-                <a href="#showcase">
-                  <img src="assets/watch-apex-pro.jpg" alt="Kinetix Apex Pro Smartwatch" class="product-card__image" loading="lazy">
-                </a>
-                <div class="product-card__quick-add">
-                  <button type="button" class="btn btn-primary btn-sm btn-full" data-quick-add-btn data-product-title="Kinetix Apex Pro Smartwatch" data-product-price="249.00">Quick Add</button>
-                </div>
-              </div>
-              <div class="product-card__content">
-                <div class="product-card__vendor">Kinetix Apex Series</div>
-                <h3 class="product-card__title"><a href="#showcase">Kinetix Apex Pro Titanium Smartwatch</a></h3>
-                <div class="product-card__rating">
-                  <div style="display:flex; gap:2px; color:var(--accent-gold);">★★★★★</div>
-                  <span style="font-size:0.8rem; color:var(--text-muted); margin-left:4px;">(4.9)</span>
-                </div>
-                <div class="product-card__price-wrapper">
-                  <span class="product-price">$249.00</span>
-                  <span class="product-price--compare">$329.00</span>
-                  <span class="product-price--save">SAVE 24%</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="product-card" data-product-handle="kinetix-thrux-military">
-              <div class="product-card__image-wrapper">
-                <div class="product-card__badges">
-                  <span class="badge badge-sale">-24% OFF</span>
-                  <span class="badge badge-featured">MIL-SPEC 810H</span>
-                </div>
-                <div class="product-card__actions">
-                  <button type="button" class="btn-icon" data-quick-view data-product-handle="kinetix-thrux-military" aria-label="Quick View">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-                  </button>
-                </div>
-                <a href="#showcase">
-                  <img src="assets/watch-thrux-military.jpg" alt="Kinetix Thrux Military GPS Smartwatch" class="product-card__image" loading="lazy">
-                </a>
-                <div class="product-card__quick-add">
-                  <button type="button" class="btn btn-primary btn-sm btn-full" data-quick-add-btn data-product-title="Kinetix Thrux Military GPS" data-product-price="189.00">Quick Add</button>
-                </div>
-              </div>
-              <div class="product-card__content">
-                <div class="product-card__vendor">Tactical Armor</div>
-                <h3 class="product-card__title"><a href="#showcase">Kinetix Thrux Rugged Military GPS (170 Sports)</a></h3>
-                <div class="product-card__rating">
-                  <div style="display:flex; gap:2px; color:var(--accent-gold);">★★★★★</div>
-                  <span style="font-size:0.8rem; color:var(--text-muted); margin-left:4px;">(4.95)</span>
-                </div>
-                <div class="product-card__price-wrapper">
-                  <span class="product-price">$189.00</span>
-                  <span class="product-price--compare">$249.00</span>
-                  <span class="product-price--save">SAVE 24%</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="product-card" data-product-handle="kinetix-heritage-royale">
-              <div class="product-card__image-wrapper">
-                <div class="product-card__badges">
-                  <span class="badge badge-sale">-25% OFF</span>
-                  <span class="badge" style="background: rgba(245,158,11,0.2); color: var(--accent-gold);">ROYALE</span>
-                </div>
-                <div class="product-card__actions">
-                  <button type="button" class="btn-icon" data-quick-view data-product-handle="kinetix-heritage-royale" aria-label="Quick View">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-                  </button>
-                </div>
-                <a href="#showcase">
-                  <img src="assets/watch-heritage-royale.jpg" alt="Heritage Royale Chronograph" class="product-card__image" loading="lazy">
-                </a>
-                <div class="product-card__quick-add">
-                  <button type="button" class="btn btn-primary btn-sm btn-full" data-quick-add-btn data-product-title="Heritage Royale Chronograph" data-product-price="299.00">Quick Add</button>
-                </div>
-              </div>
-              <div class="product-card__content">
-                <div class="product-card__vendor">Horology Royale</div>
-                <h3 class="product-card__title"><a href="#showcase">Heritage Royale Teal & Rose Gold Smart Chronograph</a></h3>
-                <div class="product-card__rating">
-                  <div style="display:flex; gap:2px; color:var(--accent-gold);">★★★★★</div>
-                  <span style="font-size:0.8rem; color:var(--text-muted); margin-left:4px;">(5.0)</span>
-                </div>
-                <div class="product-card__price-wrapper">
-                  <span class="product-price">$299.00</span>
-                  <span class="product-price--compare">$399.00</span>
-                  <span class="product-price--save">SAVE 25%</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Product 4 -->
-            <div class="product-card" data-product-handle="kinetix-pulse-elite">
-              <div class="product-card__image-wrapper">
-                <div class="product-card__badges">
-                  <span class="badge badge-sale">-25% OFF</span>
-                  <span class="badge" style="background: rgba(16,185,129,0.2); color: #34d399;">BIOPULSE</span>
-                </div>
-                <div class="product-card__actions">
-                  <button type="button" class="btn-icon" data-quick-view data-product-handle="kinetix-pulse-elite" aria-label="Quick View">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-                  </button>
-                </div>
-                <a href="#showcase">
-                  <img src="assets/watch-pulse-elite.jpg" alt="Pulse Elite Fitness ECG" class="product-card__image" loading="lazy">
-                </a>
-                <div class="product-card__quick-add">
-                  <button type="button" class="btn btn-primary btn-sm btn-full" data-quick-add-btn data-product-title="Kinetix Pulse Elite ECG" data-product-price="149.00">Quick Add</button>
-                </div>
-              </div>
-              <div class="product-card__content">
-                <div class="product-card__vendor">BioTelemetry Series</div>
-                <h3 class="product-card__title"><a href="#showcase">Kinetix Pulse Elite Curved OLED Fitness & ECG Tracker</a></h3>
-                <div class="product-card__rating">
-                  <div style="display:flex; gap:2px; color:var(--accent-gold);">★★★★★</div>
-                  <span style="font-size:0.8rem; color:var(--text-muted); margin-left:4px;">(4.88)</span>
-                </div>
-                <div class="product-card__price-wrapper">
-                  <span class="product-price">$149.00</span>
-                  <span class="product-price--compare">$199.00</span>
-                  <span class="product-price--save">SAVE 25%</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 5. TECH SPECS MATRIX -->
-      <section class="section-spacing" id="specs" style="background: var(--bg-surface); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-subtitle">Telemetry & Engineering</span>
-            <h2 class="section-title">FLAGSHIP SPECIFICATIONS COMPARISON</h2>
-            <p class="section-description">
-              Direct side-by-side engineering telemetry metrics across the Kinetix Pro model series.
-            </p>
-          </div>
-
-          <div class="glass-card" style="overflow-x: auto; padding: 0; border-radius: var(--radius-xl);">
-            <table style="width: 100%; min-width: 780px; border-collapse: collapse; text-align: left;">
-              <thead>
-                <tr style="border-bottom: 1px solid var(--border-subtle); background: rgba(255,255,255,0.02);">
-                  <th style="padding: 24px; font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-primary); width: 28%;">Specification</th>
-                  <th style="padding: 24px; font-family: var(--font-heading); font-size: 1.1rem; color: var(--accent-gold); width: 24%;">
-                    Apex Pro Titanium
-                    <span class="badge badge-new" style="display: block; margin-top: 6px; width: fit-content;">Flagship</span>
-                  </th>
-                  <th style="padding: 24px; font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-primary); width: 24%;">Thrux Military GPS</th>
-                  <th style="padding: 24px; font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-primary); width: 24%;">Heritage Royale</th>
-                </tr>
-              </thead>
-              <tbody style="font-size: 0.92rem;">
-                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-                  <td style="padding: 18px 24px; color: var(--text-secondary); font-weight: 600;">Chassis & Bezel Material</td>
-                  <td style="padding: 18px 24px; color: var(--accent-gold); font-weight: 700;">Aerospace Grade 5 Titanium</td>
-                  <td style="padding: 18px 24px; color: var(--text-primary);">Reinforced Polycarbonate + Steel</td>
-                  <td style="padding: 18px 24px; color: var(--text-primary);">18K Rose Gold Ion-Plated 316L</td>
-                </tr>
-                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.01);">
-                  <td style="padding: 18px 24px; color: var(--text-secondary); font-weight: 600;">Water Resistance Rating</td>
-                  <td style="padding: 18px 24px; color: var(--accent-gold); font-weight: 700;">10 ATM (100 Meters / 330 Ft)</td>
-                  <td style="padding: 18px 24px; color: var(--text-primary);">5 ATM (50 Meters)</td>
-                  <td style="padding: 18px 24px; color: var(--text-primary);">3 ATM Splashproof</td>
-                </tr>
-                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-                  <td style="padding: 18px 24px; color: var(--text-secondary); font-weight: 600;">Battery Endurance</td>
-                  <td style="padding: 18px 24px; color: var(--accent-gold); font-weight: 700;">45 Days (Eco) / 18 Days (Heavy)</td>
-                  <td style="padding: 18px 24px; color: var(--text-primary);">30 Days Ultra Runtime</td>
-                  <td style="padding: 18px 24px; color: var(--text-primary);">14 Days Smart Hybrid</td>
-                </tr>
-                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.01);">
-                  <td style="padding: 18px 24px; color: var(--text-secondary); font-weight: 600;">Satellite Positioning</td>
-                  <td style="padding: 18px 24px; color: var(--accent-gold); font-weight: 700;">Dual-Freq L1+L5 (6 Constellations)</td>
-                  <td style="padding: 18px 24px; color: var(--text-primary);">Multi-GNSS Precision GPS</td>
-                  <td style="padding: 18px 24px; color: var(--text-primary);">Connected Phone Assisted GPS</td>
-                </tr>
-                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-                  <td style="padding: 18px 24px; color: var(--text-secondary); font-weight: 600;">Glass Display Protection</td>
-                  <td style="padding: 18px 24px; color: var(--accent-gold); font-weight: 700;">Synthetic Sapphire Crystal (9H)</td>
-                  <td style="padding: 18px 24px; color: var(--text-primary);">Corning Gorilla Glass Victus</td>
-                  <td style="padding: 18px 24px; color: var(--text-primary);">Mineral Hardlex Domed Glass</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <!-- 6. BRAND ENGINEERING HERITAGE -->
-      <section class="section-spacing" id="heritage">
-        <div class="container">
-          <div class="grid grid-cols-2" style="align-items: center; gap: clamp(36px, 6vw, 72px);">
-            <div style="position: relative;">
-              <div style="border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-lg);">
-                <img src="assets/engineering-heritage.jpg" alt="The Kinetix Engineering Heritage" style="width: 100%; height: 100%; object-fit: cover;" width="800" height="450">
-                <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 24px; background: linear-gradient(0deg, rgba(9,13,22,0.95) 0%, transparent 100%);">
-                  <span class="badge badge-new" style="margin-bottom: 6px;">ZURICH • TOKYO • BOULDER</span>
-                  <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary);">ISO 9001 & MIL-STD-810H Cleanroom Assembly</div>
-                </div>
-              </div>
-            </div>
-
+          <div class="grid grid-cols-2" style="align-items: start; gap: 48px;">
+            <!-- Left Gallery -->
             <div>
-              <span class="section-subtitle">Engineering Heritage</span>
-              <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); margin-bottom: 20px; line-height: 1.15;">
-                WHERE SWISS HOROLOGY MEETS AEROSPACE TELEMETRY
-              </h2>
-              <p style="font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.7;">
-                Founded by aerospace materials engineers and veteran Swiss horologists, Kinetix Pro was born from a singular obsession: to build smartwatches that refuse to compromise between tactical indestructibility and mechanical luxury elegance.
+              <div class="glass-card" style="padding: 16px; border-radius: var(--radius-xl); overflow: hidden; margin-bottom: 16px;">
+                <img id="detail-main-img" src="assets/watch-apex-pro.jpg" alt="Product Image" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: var(--radius-lg);">
+              </div>
+            </div>
+
+            <!-- Right Info & Actions -->
+            <div class="glass-card" style="padding: 36px; border-radius: var(--radius-xl);">
+              <span class="badge badge-sale" id="detail-badge">APEX TECH</span>
+              <div style="font-size: 0.85rem; color: var(--accent-gold); text-transform: uppercase; margin-top: 8px;" id="detail-category">Apex Titanium Series</div>
+              <h1 style="font-size: 2.2rem; margin: 8px 0 16px 0;" id="detail-title">Kinetix Apex Pro Titanium Smartwatch</h1>
+
+              <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 20px;">
+                <span style="font-size: 2.2rem; font-weight: 800; color: var(--text-primary); font-family: var(--font-heading);" id="detail-price">$249.00</span>
+                <span style="font-size: 1.2rem; color: var(--text-muted); text-decoration: line-through;" id="detail-compare">$329.00</span>
+                <span class="badge badge-sale">SAVE 24%</span>
+              </div>
+
+              <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px;" id="detail-description">
+                The pinnacle of tactical luxury horology. CNC-machined from solid aerospace Grade 5 titanium, equipped with synthetic sapphire crystal, dual-frequency L1+L5 multi-satellite navigation, and 100-meter oceanic waterproof certification.
               </p>
-              <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 28px; line-height: 1.6;">
-                Every single case is milled from solid billets of Grade 5 titanium, cryogenically hardened, and hand-inspected under high-power optical microscopes before receiving its proprietary BioPulse™ photodiode array.
-              </p>
-              <a href="#faq" class="btn btn-secondary btn-lg">
-                <span>Contact VIP Support Desk</span> &rarr;
+
+              <!-- Finish Swatches -->
+              <div style="margin-bottom: 24px;">
+                <label style="display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 10px; color: var(--text-secondary);">Select Finish: <span style="color: var(--accent-gold);" id="detail-selected-finish">Stealth Titanium Carbon</span></label>
+                <div style="display: flex; gap: 10px;">
+                  <button type="button" class="swatch-btn active" style="width: 36px; height: 36px; border-radius: 50%; background: #1e293b; border: 2px solid var(--accent-gold);" onclick="document.getElementById('detail-selected-finish').textContent='Stealth Titanium Carbon'"></button>
+                  <button type="button" class="swatch-btn" style="width: 36px; height: 36px; border-radius: 50%; background: #94a3b8; border: 2px solid transparent;" onclick="document.getElementById('detail-selected-finish').textContent='Aero Silver Grade-5'"></button>
+                  <button type="button" class="swatch-btn" style="width: 36px; height: 36px; border-radius: 50%; background: #78716c; border: 2px solid transparent;" onclick="document.getElementById('detail-selected-finish').textContent='Tactical Desert Khaki'"></button>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div style="display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap;">
+                <button type="button" class="btn btn-primary btn-lg" style="flex: 1; min-width: 200px;" id="detail-add-cart-btn">
+                  <span>Add to Cart</span>
+                </button>
+                <button type="button" class="btn btn-secondary btn-lg" id="detail-buy-now-btn" onclick="navigateTo('checkout')">
+                  <span>Direct Checkout</span>
+                </button>
+              </div>
+
+              <!-- Order via WhatsApp Button -->
+              <a id="detail-whatsapp-btn" href="#" target="_blank" class="btn btn-full btn-lg" style="background: #25d366; color: #fff; font-weight: 700; margin-bottom: 24px; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                <span>Order Directly via WhatsApp</span>
               </a>
+
+              <div style="font-size: 0.85rem; color: var(--text-muted); display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 16px; border-top: 1px solid var(--border-subtle);">
+                <div>🛡️ 2-Year Global Warranty</div>
+                <div>✈️ Free Express Dispatch</div>
+                <div>💵 Cash on Delivery (COD)</div>
+                <div>🔄 30-Day Money Back</div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 7. REVIEWS & TESTIMONIALS -->
-      <section class="section-spacing" id="reviews" style="background: radial-gradient(circle at 50% 100%, rgba(19, 29, 49, 0.6) 0%, rgba(9, 13, 22, 1) 100%);">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-subtitle">Field Telemetry</span>
-            <h2 class="section-title">VERIFIED OPERATOR & ATHLETE EXPERIENCES</h2>
-            <p class="section-description">
-              Discover how elite ultra-endurance runners, deep-sea divers, and military personnel rely on Kinetix Pro in mission-critical moments.
+      <!-- ==========================================
+           PAGE 4: CHECKOUT & ORDER PLACEMENT
+           ========================================== -->
+      <section id="view-checkout" class="page-view">
+        <div class="container section-spacing" style="max-width: 1000px;">
+          <div class="section-header text-left">
+            <span class="section-subtitle">Secure Order Placement</span>
+            <h1 class="section-title">EXPRESS CHECKOUT</h1>
+          </div>
+
+          <form id="checkout-form" onsubmit="event.preventDefault(); handleCheckoutSubmit();">
+            <div class="grid grid-cols-2" style="gap: 40px; align-items: start;">
+              
+              <!-- Customer & Shipping Form -->
+              <div class="glass-card" style="padding: 32px;">
+                <h3 style="font-size: 1.25rem; margin-bottom: 20px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 12px;">1. Shipping & Customer Details</h3>
+
+                <div class="form-group">
+                  <label class="form-label">Full Name *</label>
+                  <input type="text" id="checkout-name" class="form-input" placeholder="e.g. Marcus Vance" required>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                  <div class="form-group">
+                    <label class="form-label">Phone / WhatsApp Number *</label>
+                    <input type="tel" id="checkout-phone" class="form-input" placeholder="+92 300 1234567" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Email Address *</label>
+                    <input type="email" id="checkout-email" class="form-input" placeholder="name@example.com" required>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Complete Street Address *</label>
+                  <input type="text" id="checkout-address" class="form-input" placeholder="House #, Street, Area / Landmark" required>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                  <div class="form-group">
+                    <label class="form-label">City *</label>
+                    <input type="text" id="checkout-city" class="form-input" placeholder="e.g. Lahore / New York" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Postal / Zip Code</label>
+                    <input type="text" id="checkout-zip" class="form-input" placeholder="e.g. 54000">
+                  </div>
+                </div>
+
+                <h3 style="font-size: 1.25rem; margin: 28px 0 16px 0; border-bottom: 1px solid var(--border-subtle); padding-bottom: 12px;">2. Select Payment Method</h3>
+
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                  <label class="glass-card" style="padding: 16px; display: flex; align-items: center; gap: 14px; cursor: pointer; border-color: var(--accent-gold);">
+                    <input type="radio" name="paymentMethod" value="Cash on Delivery (COD)" checked style="accent-color: var(--accent-gold); width: 18px; height: 18px;">
+                    <div>
+                      <div style="font-weight: 700; color: var(--text-primary);">💵 Cash on Delivery (COD)</div>
+                      <div style="font-size: 0.8rem; color: var(--text-muted);">Pay cash when rider delivers to your address.</div>
+                    </div>
+                  </label>
+
+                  <label class="glass-card" style="padding: 16px; display: flex; align-items: center; gap: 14px; cursor: pointer;">
+                    <input type="radio" name="paymentMethod" value="Online Card / Bank Wire" style="accent-color: var(--accent-gold); width: 18px; height: 18px;">
+                    <div>
+                      <div style="font-weight: 700; color: var(--text-primary);">💳 Credit Card / Online Bank Transfer</div>
+                      <div style="font-size: 0.8rem; color: var(--text-muted);">Instant encrypted transfer via Visa, Mastercard or Bank wire.</div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Order Summary Sidebar -->
+              <div class="glass-card" style="padding: 32px; border: 1px solid var(--border-active);">
+                <h3 style="font-size: 1.25rem; margin-bottom: 20px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 12px;">Order Summary</h3>
+                
+                <div id="checkout-items-list" style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px;">
+                  <!-- Rendered by JS -->
+                </div>
+
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.95rem;">
+                  <span style="color: var(--text-secondary);">Subtotal</span>
+                  <span id="checkout-subtotal" style="font-weight: 700;">$249.00</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 16px; font-size: 0.95rem;">
+                  <span style="color: var(--text-secondary);">Express Shipping</span>
+                  <span style="color: #10b981; font-weight: 700;">FREE</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 24px; padding-top: 16px; border-top: 1px solid var(--border-subtle); font-size: 1.4rem; font-weight: 800;">
+                  <span>Total Amount</span>
+                  <span id="checkout-total" style="color: var(--accent-gold); font-family: var(--font-heading);">$249.00</span>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full btn-lg">
+                  <span>Place Order Now</span> &rarr;
+                </button>
+
+                <p style="font-size: 0.78rem; color: var(--text-muted); text-align: center; margin-top: 16px;">
+                  🔒 256-Bit Encrypted Order Placement • Instant WhatsApp & Email Confirmation
+                </p>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           PAGE 5: ORDER TRACKING PORTAL
+           ========================================== -->
+      <section id="view-tracking" class="page-view">
+        <div class="container section-spacing" style="max-width: 860px;">
+          <div class="glass-card" style="padding: 40px; text-align: center; margin-bottom: 40px; background: radial-gradient(circle at 50% 0%, rgba(245,158,11,0.12) 0%, rgba(19,29,49,0.95) 100%);">
+            <span class="badge badge-new" style="margin-bottom: 12px;">REAL-TIME COURIER TELEMETRY</span>
+            <h1 style="font-size: 2.4rem; margin-bottom: 12px;">Track Your Watch Delivery</h1>
+            <p style="color: var(--text-secondary); max-width: 540px; margin: 0 auto 24px auto;">
+              Enter your Order ID (e.g. <strong style="color:var(--accent-gold);">KP-84920</strong>) or Phone Number to view live dispatch telemetry.
+            </p>
+
+            <form onsubmit="event.preventDefault(); trackOrderQuery();" style="display: flex; gap: 12px; max-width: 500px; margin: 0 auto;">
+              <input type="text" id="tracking-input" class="form-input" placeholder="Enter Order ID: KP-84920" style="padding: 14px 20px;" required>
+              <button type="submit" class="btn btn-primary btn-lg">Track</button>
+            </form>
+          </div>
+
+          <!-- Tracking Results Card -->
+          <div id="tracking-result-box" class="glass-card hidden" style="padding: 36px; border: 1px solid var(--border-active);">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-subtle); padding-bottom: 16px; margin-bottom: 24px; flex-wrap: wrap; gap: 12px;">
+              <div>
+                <div style="font-size: 0.85rem; color: var(--text-muted);">Tracking Order ID</div>
+                <div style="font-size: 1.6rem; font-weight: 800; font-family: monospace; color: var(--accent-gold);" id="track-order-id">KP-84920</div>
+              </div>
+              <div>
+                <span class="badge badge-new" id="track-status-badge">In Transit</span>
+              </div>
+            </div>
+
+            <!-- Stepper -->
+            <div class="tracking-stepper">
+              <div class="tracking-step done">
+                <div class="step-circle">✓</div>
+                <div style="font-size: 0.82rem; font-weight: 700;">Order Placed</div>
+              </div>
+              <div class="tracking-step done">
+                <div class="step-circle">✓</div>
+                <div style="font-size: 0.82rem; font-weight: 700;">Cleanroom Packed</div>
+              </div>
+              <div class="tracking-step done">
+                <div class="step-circle">✓</div>
+                <div style="font-size: 0.82rem; font-weight: 700;">Air Courier Dispatch</div>
+              </div>
+              <div class="tracking-step active">
+                <div class="step-circle">4</div>
+                <div style="font-size: 0.82rem; font-weight: 700;">In Transit</div>
+              </div>
+              <div class="tracking-step">
+                <div class="step-circle">5</div>
+                <div style="font-size: 0.82rem; font-weight: 700;">Delivered</div>
+              </div>
+            </div>
+
+            <div style="margin-top: 32px; padding: 20px; background: rgba(255,255,255,0.03); border-radius: var(--radius-md); font-size: 0.9rem;">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                <div><strong>Customer:</strong> <span id="track-customer-name">Marcus Vance</span></div>
+                <div><strong>Air Tracking #:</strong> <span id="track-number" style="font-family: monospace; color: var(--accent-gold);">DHL-84920-USA</span></div>
+                <div><strong>Destination:</strong> <span id="track-destination">Boulder, United States</span></div>
+                <div><strong>Payment:</strong> <span id="track-payment">Cash on Delivery (COD)</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           PAGE 6: ABOUT US & ENGINEERING HERITAGE
+           ========================================== -->
+      <section id="view-about" class="page-view">
+        <div class="container section-spacing">
+          <div class="glass-card" style="padding: 48px; text-align: center; margin-bottom: 48px; background: radial-gradient(circle at 50% 0%, rgba(245,158,11,0.15) 0%, rgba(9,13,22,0.95) 100%);">
+            <span class="section-subtitle">The Engineering Heritage</span>
+            <h1 style="font-size: 3rem; margin-bottom: 16px;">WHERE HOROLOGY MEETS AEROSPACE</h1>
+            <p style="max-width: 720px; margin: 0 auto; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8;">
+              Kinetix Pro was established with a singular doctrine: smartwatches should not be disposable plastic gadgets. They should be lifetime instruments milled from indestructible Grade 5 titanium.
             </p>
           </div>
 
-          <div class="grid grid-cols-3">
-            <div class="glass-card" style="padding: 32px;">
-              <div style="display: flex; gap: 4px; color: var(--accent-gold); margin-bottom: 16px;">★★★★★</div>
-              <h4 style="font-size: 1.15rem; margin-bottom: 12px;">"Survived 14 Days on Denali in -35°F"</h4>
-              <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px;">
-                "The battery life on the Kinetix Apex Pro is phenomenal. In extreme sub-zero conditions where every other device crashed, the titanium chassis maintained GPS lock without a hiccup."
-              </p>
-              <div style="font-weight: 700; color: var(--text-primary);">Maj. Marcus Reynolds <span style="color:#10b981; font-size:0.8rem; display:block;">✓ Verified Alpine Expedition Buyer</span></div>
+          <div class="grid grid-cols-2" style="align-items: center; gap: 48px; margin-bottom: 64px;">
+            <div style="border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--border-subtle);">
+              <img src="assets/engineering-heritage.jpg" alt="Watchmaking Lab" style="width: 100%;">
             </div>
-
-            <div class="glass-card" style="padding: 32px; border-color: rgba(245,158,11,0.3);">
-              <div style="display: flex; gap: 4px; color: var(--accent-gold); margin-bottom: 16px;">★★★★★</div>
-              <h4 style="font-size: 1.15rem; margin-bottom: 12px;">"The Heritage Royale Blends Swiss Elegance"</h4>
-              <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px;">
-                "As a watch collector with pieces from Geneva, I was skeptical. The rose gold finish and deep teal emerald dial look like a $5,000 Swiss chronometer on my wrist."
+            <div>
+              <span class="badge badge-new" style="margin-bottom: 12px;">Precision Craftsmanship</span>
+              <h2 style="font-size: 2.2rem; margin-bottom: 16px;">Micro-Milled Titanium Grade 5</h2>
+              <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.7; margin-bottom: 20px;">
+                Every Kinetix Pro chassis is CNC-machined for 4.5 hours from a solid billet of aerospace Ti-6Al-4V titanium, followed by cryogenic stress-relieving and diamond-like carbon vapor deposition.
               </p>
-              <div style="font-weight: 700; color: var(--text-primary);">Dr. David Laurent <span style="color:#10b981; font-size:0.8rem; display:block;">✓ Verified Horology Buyer</span></div>
-            </div>
-
-            <div class="glass-card" style="padding: 32px;">
-              <div style="display: flex; gap: 4px; color: var(--accent-gold); margin-bottom: 16px;">★★★★★</div>
-              <h4 style="font-size: 1.15rem; margin-bottom: 12px;">"100M Deep Oceanic Scuba Dive"</h4>
-              <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px;">
-                "Took the Thrux Tactical GPS down to 75 meters on a deep wreck dive off the Red Sea. The tactile buttons work effortlessly underwater and the AMOLED display was crystal clear."
-              </p>
-              <div style="font-weight: 700; color: var(--text-primary);">Sarah Van Der Beek <span style="color:#10b981; font-size:0.8rem; display:block;">✓ Verified Master Diver</span></div>
+              <div style="display: flex; gap: 32px; border-top: 1px solid var(--border-subtle); padding-top: 20px;">
+                <div>
+                  <div style="font-size: 1.8rem; font-weight: 800; color: var(--accent-gold);">0.002mm</div>
+                  <div style="font-size: 0.8rem; color: var(--text-muted);">CNC Milling Tolerance</div>
+                </div>
+                <div>
+                  <div style="font-size: 1.8rem; font-weight: 800; color: #10b981;">10 ATM</div>
+                  <div style="font-size: 0.8rem; color: var(--text-muted);">Submersible Depth</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 8. FAQ & SUPPORT -->
-      <section class="section-spacing" id="faq">
-        <div class="container">
+      <!-- ==========================================
+           PAGE 7: CONTACT US & WHATSAPP SUPPORT
+           ========================================== -->
+      <section id="view-contact" class="page-view">
+        <div class="container section-spacing" style="max-width: 900px;">
           <div class="section-header">
-            <span class="section-subtitle">Operator Support</span>
-            <h2 class="section-title">FREQUENTLY ASKED QUESTIONS</h2>
+            <span class="section-subtitle">24/7 Global Desk</span>
+            <h1 class="section-title">CONTACT & OPERATOR SUPPORT</h1>
+            <p class="section-description">Reach our team directly via WhatsApp, Phone, or Priority Support Ticket.</p>
           </div>
 
-          <div class="grid grid-cols-2" style="align-items: start; gap: clamp(32px, 5vw, 64px);">
-            <div class="faq-accordion-group" style="display: flex; flex-direction: column; gap: 16px;">
-              <div class="accordion-item glass-card active" style="border-radius: var(--radius-md);">
-                <button type="button" class="accordion-header" style="width: 100%; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; font-weight: 700;">
-                  <span>How durable is the Grade 5 Titanium and Sapphire lens?</span>
-                  <span style="color: var(--accent-gold);">▼</span>
-                </button>
-                <div class="accordion-content" style="padding: 0 24px 24px 24px; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
-                  Every Kinetix Apex Pro is CNC-machined from solid aerospace Grade 5 titanium (Ti-6Al-4V), offering supreme strength. The synthetic sapphire crystal has a hardness of 9H Mohs scale, making it practically scratchproof against sand and steel.
+          <div class="grid grid-cols-2" style="gap: 36px; align-items: start;">
+            <!-- Contact Info Cards -->
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+              
+              <!-- WhatsApp Direct Box -->
+              <div class="glass-card" style="padding: 28px; border-color: #25d366;">
+                <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 12px;">
+                  <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(37, 211, 102, 0.2); display: flex; align-items: center; justify-content: center; color: #25d366; font-size: 1.4rem;">
+                    💬
+                  </div>
+                  <div>
+                    <h4 style="font-size: 1.1rem; margin: 0;">Official WhatsApp Desk</h4>
+                    <div style="font-size: 0.85rem; color: #25d366; font-weight: 700;">Live & Online Now</div>
+                  </div>
                 </div>
+                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 16px;">
+                  Chat with an agent for instant orders, customization inquiries, and dispatch status.
+                </p>
+                <a id="contact-page-whatsapp-btn" href="https://wa.me/923001234567" target="_blank" class="btn btn-full" style="background: #25d366; color: #fff; font-weight: 700;">
+                  <span>Chat on WhatsApp Now</span> &rarr;
+                </a>
               </div>
 
-              <div class="accordion-item glass-card" style="border-radius: var(--radius-md);">
-                <button type="button" class="accordion-header" style="width: 100%; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; font-weight: 700;">
-                  <span>How does the 10 ATM (100-meter) water resistance work?</span>
-                  <span style="color: var(--accent-gold);">▼</span>
-                </button>
-                <div class="accordion-content" style="padding: 0 24px 24px 24px; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; display: none;">
-                  The watch utilizes triple-sealed fluorosilicone gaskets and an acoustic membrane that withstands 100 meters (10 bar) hydrostatic pressure. Fully certified for swimming and scuba diving.
+              <!-- Phone & Email -->
+              <div class="glass-card" style="padding: 28px;">
+                <div style="margin-bottom: 16px;">
+                  <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Direct Phone Line</div>
+                  <div style="font-size: 1.1rem; font-weight: 700; color: var(--text-primary);">+1 (800) 456-8920</div>
                 </div>
-              </div>
-
-              <div class="accordion-item glass-card" style="border-radius: var(--radius-md);">
-                <button type="button" class="accordion-header" style="width: 100%; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; font-weight: 700;">
-                  <span>What is included in the 2-Year Global Warranty?</span>
-                  <span style="color: var(--accent-gold);">▼</span>
-                </button>
-                <div class="accordion-content" style="padding: 0 24px 24px 24px; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; display: none;">
-                  All watches come standard with our 2-Year Comprehensive Guarantee covering sensor calibration, battery health, and titanium seal integrity with priority courier replacement.
+                <div>
+                  <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Technical Desk Email</div>
+                  <div style="font-size: 1.1rem; font-weight: 700; color: var(--accent-gold);">support@kinetixpro-watches.com</div>
                 </div>
               </div>
             </div>
 
-            <!-- Support Box -->
-            <div class="glass-card" style="padding: 36px; border: 1px solid var(--border-active);">
-              <span class="badge badge-new" style="margin-bottom: 12px;">Direct Priority Desk</span>
-              <h3 style="font-size: 1.6rem; margin-bottom: 12px;">Need Specialized Support?</h3>
-              <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 24px;">
-                Our technical horologists and field gear specialists are available 24/7 to assist with tactical configurations and worldwide dispatch.
-              </p>
-              <div style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 20px;">
-                ✉️ <strong>Email:</strong> support@kinetixpro-watches.com<br>
-                ⏱️ <strong>Response:</strong> Under 15 minutes worldwide
-              </div>
-              <button type="button" class="btn btn-primary btn-full" onclick="alert('Support ticket system active. Please send your inquiries to support@kinetixpro-watches.com or start live chat!')">
-                <span>Open Priority Ticket</span> &rarr;
-              </button>
+            <!-- Priority Ticket Form -->
+            <div class="glass-card" style="padding: 32px; border: 1px solid var(--border-active);">
+              <h3 style="font-size: 1.3rem; margin-bottom: 16px;">Dispatch Support Ticket</h3>
+              <form onsubmit="event.preventDefault(); KinetixTheme.showToast('✓ Support ticket dispatched! Our horologist will reply within 15 mins.'); this.reset();">
+                <div class="form-group">
+                  <label class="form-label">Full Name</label>
+                  <input type="text" class="form-input" placeholder="Marcus Vance" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Email Address</label>
+                  <input type="email" class="form-input" placeholder="marcus@example.com" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Message Details</label>
+                  <textarea class="form-textarea" rows="3" placeholder="How can we assist with your order?" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+              </form>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 9. VIP NEWSLETTER -->
-      <section class="section-spacing" id="newsletter">
-        <div class="container">
-          <div class="glass-card" style="padding: clamp(32px, 6vw, 64px); background: radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.12) 0%, rgba(19, 29, 49, 0.9) 100%); border: 1px solid rgba(245, 158, 11, 0.3); text-align: center; max-width: 900px; margin: 0 auto; border-radius: var(--radius-xl);">
-            <span class="badge badge-new" style="margin-bottom: 16px;">VIP OPERATOR DISPATCH</span>
-            <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); margin-bottom: 16px;">
-              JOIN THE KINETIX INNER CIRCLE
-            </h2>
-            <p style="max-width: 600px; margin: 0 auto 32px auto; color: var(--text-secondary); font-size: 1.05rem;">
-              Subscribe to receive early prototype drops, firmware updates, and an instant <strong style="color: var(--accent-gold);">$30 VIP welcome voucher</strong> on your first order.
-            </p>
+      <!-- ==========================================
+           PAGE 8: POLICIES, SHIPPING & REFUNDS
+           ========================================== -->
+      <section id="view-policies" class="page-view">
+        <div class="container section-spacing" style="max-width: 860px;">
+          <div class="section-header">
+            <span class="section-subtitle">Customer Assurance</span>
+            <h1 class="section-title">STORE POLICIES & TERMS</h1>
+          </div>
 
-            <form onsubmit="event.preventDefault(); KinetixTheme.showToast('🎉 VIP Code KINETIXVIP30 activated! $30 off your cart.');" style="max-width: 540px; margin: 0 auto; display: flex; gap: 12px; flex-wrap: wrap;">
-              <input type="email" class="form-input" placeholder="Enter your email address..." required style="flex: 1; min-width: 240px; background: rgba(9, 13, 22, 0.8);">
-              <button type="submit" class="btn btn-primary btn-lg" style="min-width: 160px;">
-                <span>Unlock $30 Code</span>
-              </button>
+          <div style="display: flex; flex-direction: column; gap: 24px;">
+            <div class="glass-card" style="padding: 32px;">
+              <h3 style="color: var(--accent-gold); margin-bottom: 12px;">💵 Payment Methods & Cash on Delivery (COD)</h3>
+              <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">
+                We accept <strong>Cash on Delivery (COD)</strong>, Credit/Debit Cards (Visa, Mastercard, American Express), and direct bank wire transfers. For COD orders, payment is made in cash directly to the courier rider upon parcel handover.
+              </p>
+            </div>
+
+            <div class="glass-card" style="padding: 32px;">
+              <h3 style="color: var(--accent-gold); margin-bottom: 12px;">✈️ Worldwide Shipping & Express Delivery</h3>
+              <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">
+                All orders are dispatched within 24 hours in antistatic shockproof containers via DHL Express or FedEx Air. Delivery timeline is 2 to 4 business days. Free shipping applies to all orders over $150.
+              </p>
+            </div>
+
+            <div class="glass-card" style="padding: 32px;">
+              <h3 style="color: var(--accent-gold); margin-bottom: 12px;">🔄 30-Day Return & 100% Refund Policy</h3>
+              <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">
+                If you are not 100% satisfied with your timepiece, you may return it within 30 days in original packaging for a full refund or replacement. Contact support to initiate a prepaid return label.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           PAGE 9: CUSTOMER LOGIN & SIGNUP
+           ========================================== -->
+      <section id="view-account" class="page-view">
+        <div class="container section-spacing" style="max-width: 500px;">
+          <div class="glass-card" style="padding: 40px; border: 1px solid var(--border-active);">
+            <div style="text-align: center; margin-bottom: 28px;">
+              <span class="badge badge-new" style="margin-bottom: 8px;">OPERATOR ACCESS</span>
+              <h2 style="font-size: 1.8rem; margin: 0;">Customer Account</h2>
+            </div>
+
+            <form onsubmit="event.preventDefault(); KinetixTheme.showToast('✓ Welcome back! Account authenticated.'); navigateTo('home');">
+              <div class="form-group">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-input" placeholder="user@example.com" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-input" placeholder="••••••••" required>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full btn-lg" style="margin-bottom: 16px;">Sign In to Account</button>
+              <button type="button" class="btn btn-outline btn-full btn-sm" onclick="alert('Demo account registered!')">Create New Account</button>
             </form>
           </div>
         </div>
@@ -793,66 +809,72 @@
 
     </main>
 
-    <!-- Footer -->
-    <footer class="site-footer" style="background: #05080f; border-top: 1px solid var(--border-subtle); padding: 72px 0 36px 0;" role="contentinfo">
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a id="floating-whatsapp-link" href="https://wa.me/923001234567" target="_blank" class="whatsapp-floating-btn" aria-label="Chat with us on WhatsApp">
+      <div class="pulse-ring"></div>
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+    </a>
+
+    <!-- SITE FOOTER -->
+    <footer class="site-footer" style="background: #05080f; border-top: 1px solid var(--border-subtle); padding: 72px 0 36px 0;">
       <div class="container">
         <div style="display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 56px;">
           <div>
-            <a href="index.html" class="site-header__logo" style="margin-bottom: 18px; display: inline-flex;">
-              <span style="display:inline-flex; align-items:center; justify-content:center; width:32px; height:32px; background:linear-gradient(135deg, var(--accent-gold), #d97706); border-radius:8px; color:#090d16; font-weight:900; font-size:1.1rem; margin-right:4px;">K</span>
+            <a href="javascript:void(0)" onclick="navigateTo('home')" class="site-header__logo" style="margin-bottom: 18px; display: inline-flex;">
+              <span style="display:inline-flex; align-items:center; justify-content:center; width:32px; height:32px; background:linear-gradient(135deg, var(--accent-gold), #d97706); border-radius:8px; color:#090d16; font-weight:900; margin-right:6px;">K</span>
               <span>KINETIX<span style="color:var(--accent-gold);">•</span>PRO</span>
             </a>
             <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; max-width: 320px;">
-              Pinnacle aerospace horology and mission-grade wearable computing. Engineered in Switzerland & Tokyo for elite operators worldwide.
+              Pinnacle aerospace horology and mission-grade wearable computing. Engineered for elite operators worldwide.
             </p>
+            <a href="admin.html" class="btn btn-outline btn-sm" style="color:var(--accent-gold); border-color:rgba(245,158,11,0.4);">
+              <span>⚙️ Open Control Panel (Admin)</span>
+            </a>
           </div>
 
           <div>
-            <h4 style="font-size: 1rem; color: var(--text-primary); margin-bottom: 20px; text-transform: uppercase;">Watch Series</h4>
+            <h4 style="font-size: 1rem; color: var(--text-primary); margin-bottom: 20px; text-transform: uppercase;">Navigation</h4>
             <ul style="display: flex; flex-direction: column; gap: 12px; font-size: 0.9rem; color: var(--text-secondary);">
-              <li><a href="#showcase">Apex Pro Titanium</a></li>
-              <li><a href="#products">Thrux Tactical Military</a></li>
-              <li><a href="#products">Heritage Royale Chrono</a></li>
-              <li><a href="#products">Pulse Elite Biometric ECG</a></li>
+              <li><a href="javascript:void(0)" onclick="navigateTo('shop')">All Smartwatches</a></li>
+              <li><a href="javascript:void(0)" onclick="navigateTo('tracking')">Track Your Order</a></li>
+              <li><a href="javascript:void(0)" onclick="navigateTo('about')">About Us & Heritage</a></li>
+              <li><a href="javascript:void(0)" onclick="navigateTo('contact')">WhatsApp & Contact</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 style="font-size: 1rem; color: var(--text-primary); margin-bottom: 20px; text-transform: uppercase;">Technology</h4>
+            <h4 style="font-size: 1rem; color: var(--text-primary); margin-bottom: 20px; text-transform: uppercase;">Payment & Policies</h4>
             <ul style="display: flex; flex-direction: column; gap: 12px; font-size: 0.9rem; color: var(--text-secondary);">
-              <li><a href="#heritage">Grade-5 Titanium Forging</a></li>
-              <li><a href="#heritage">BioPulse™ 8-Channel Sensor</a></li>
-              <li><a href="#specs">Dual-Band L1+L5 GPS</a></li>
-              <li><a href="#specs">Polar & Desert Stress Testing</a></li>
+              <li><a href="javascript:void(0)" onclick="navigateTo('policies')">Cash on Delivery (COD)</a></li>
+              <li><a href="javascript:void(0)" onclick="navigateTo('policies')">Worldwide Express Shipping</a></li>
+              <li><a href="javascript:void(0)" onclick="navigateTo('policies')">30-Day Money Back Policy</a></li>
+              <li><a href="javascript:void(0)" onclick="navigateTo('policies')">Privacy Policy & Terms</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 style="font-size: 1rem; color: var(--text-primary); margin-bottom: 20px; text-transform: uppercase;">Support</h4>
+            <h4 style="font-size: 1rem; color: var(--text-primary); margin-bottom: 20px; text-transform: uppercase;">Operator Help</h4>
             <ul style="display: flex; flex-direction: column; gap: 12px; font-size: 0.9rem; color: var(--text-secondary);">
-              <li><a href="#faq">Track Order & Dispatch</a></li>
-              <li><a href="#faq">2-Year Global Warranty</a></li>
-              <li><a href="#faq">User Manuals & Pairing</a></li>
-              <li><a href="#faq">Returns & 30-Day Trial</a></li>
+              <li><a href="https://wa.me/923001234567" target="_blank" style="color: #25d366; font-weight: 700;">💬 WhatsApp Live Order</a></li>
+              <li><span style="color:var(--text-muted);">📞 +1 (800) 456-8920</span></li>
+              <li><span style="color:var(--text-muted);">✉️ support@kinetixpro-watches.com</span></li>
             </ul>
           </div>
         </div>
 
         <div style="padding-top: 32px; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; font-size: 0.85rem; color: var(--text-muted);">
-          <div>
-            &copy; 2026 Kinetix Pro Smartwatches. All Rights Reserved. Complete Shopify 2.0 Theme.
-          </div>
-          <div style="display: flex; gap: 12px;">
-            <span style="padding: 4px 8px; background: rgba(255,255,255,0.05); border-radius: 4px; font-size: 0.75rem; font-weight: 700;">VISA</span>
-            <span style="padding: 4px 8px; background: rgba(255,255,255,0.05); border-radius: 4px; font-size: 0.75rem; font-weight: 700;">MASTERCARD</span>
-            <span style="padding: 4px 8px; background: rgba(255,255,255,0.05); border-radius: 4px; font-size: 0.75rem; font-weight: 700;">APPLE PAY</span>
-            <span style="padding: 4px 8px; background: rgba(255,255,255,0.05); border-radius: 4px; font-size: 0.75rem; font-weight: 700;">SHOP PAY</span>
+          <div>&copy; 2026 Kinetix Pro Smartwatches. All 15 Systems Operational & Online.</div>
+          <div style="display: flex; gap: 10px;">
+            <span style="padding: 4px 8px; background: rgba(255,255,255,0.05); border-radius: 4px;">COD</span>
+            <span style="padding: 4px 8px; background: rgba(255,255,255,0.05); border-radius: 4px;">VISA</span>
+            <span style="padding: 4px 8px; background: rgba(255,255,255,0.05); border-radius: 4px;">MASTERCARD</span>
+            <span style="padding: 4px 8px; background: rgba(255,255,255,0.05); border-radius: 4px;">APPLE PAY</span>
           </div>
         </div>
       </div>
     </footer>
 
-    <!-- Slide-Out AJAX Cart Drawer Component -->
+    <!-- Slide-Out AJAX Cart Drawer -->
     <div id="cart-drawer-overlay" class="cart-drawer-overlay"></div>
     <div id="cart-drawer" class="cart-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Shopping Cart">
       <div class="cart-drawer__header">
@@ -860,26 +882,17 @@
           <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin: 0;">Tactical Cart</h3>
           <span class="cart-count-badge" style="position: static; display: inline-flex;">1</span>
         </div>
-        <button type="button" class="btn-icon" data-cart-drawer-close aria-label="Close cart">
-          <svg class="icon icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
+        <button type="button" class="btn-icon" data-cart-drawer-close aria-label="Close cart">✕</button>
       </div>
-
       <div class="cart-drawer__shipping"></div>
       <div class="cart-drawer__items"></div>
-
       <div class="cart-drawer__footer" style="padding: 24px; background: rgba(9, 13, 22, 0.95); border-top: 1px solid var(--border-subtle); display: flex; flex-direction: column; gap: 16px;">
         <div style="display: flex; justify-content: space-between; font-size: 1.1rem; font-weight: 700;">
-          <span style="color: var(--text-secondary);">Estimated Total</span>
+          <span style="color: var(--text-secondary);">Subtotal</span>
           <span id="cart-drawer-total" style="color: var(--accent-gold); font-family: var(--font-heading); font-size: 1.3rem;">$249.00</span>
         </div>
-
-        <p style="font-size: 0.78rem; color: var(--text-muted); text-align: center; margin: 0;">
-          Taxes and customs calculated at checkout. Includes 2-Year International Warranty.
-        </p>
-
-        <button type="button" class="btn btn-primary btn-full btn-lg" style="font-weight: 700;" onclick="KinetixTheme.showToast('🚀 Proceeding to Shopify Secure Checkout...');">
-          <span>Proceed to Secure Checkout</span> &rarr;
+        <button type="button" class="btn btn-primary btn-full btn-lg" onclick="KinetixTheme.closeCart(); navigateTo('checkout');">
+          <span>Proceed to Checkout</span> &rarr;
         </button>
       </div>
     </div>
@@ -887,37 +900,223 @@
     <!-- Quick View Modal Container -->
     <div id="quick-view-modal-container" class="quick-view-modal hidden" aria-hidden="true" role="dialog" aria-modal="true"></div>
 
-    <!-- Toast Notification Container -->
+    <!-- Toast Container -->
     <div id="toast-notification-container" class="toast-container" aria-live="polite"></div>
 
-    <!-- Theme JS Script -->
+    <!-- Scripts -->
+    <script src="assets/store-db.js"></script>
     <script src="assets/theme.js"></script>
-
-    <!-- Hotspot Interactive Script -->
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const hotspots = document.querySelectorAll('.showcase-hotspot');
-        const infoDesc = document.getElementById('hotspot-live-desc');
-        hotspots.forEach(h => {
-          h.addEventListener('click', () => {
-            const tip = h.getAttribute('data-tooltip');
-            if (infoDesc && tip) {
-              infoDesc.innerHTML = `<strong>Selected Component:</strong> ${tip}`;
-              infoDesc.style.color = 'var(--text-primary)';
-            }
-          });
+      // Single Page Application Navigation Router
+      window.navigateTo = function(pageId) {
+        document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active'));
+        document.querySelectorAll('.site-nav__link').forEach(l => l.classList.remove('active'));
+        
+        const target = document.getElementById('view-' + pageId);
+        const navLink = document.querySelector(`.site-nav__link[data-nav-link="${pageId}"]`);
+        
+        if (target) target.classList.add('active');
+        if (navLink) navLink.classList.add('active');
+        
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        if (pageId === 'shop') renderShopProducts();
+        if (pageId === 'checkout') renderCheckoutSummary();
+      };
+
+      // Render Dynamic Products in Shop & Home
+      function renderShopProducts(filterCategory = 'all', searchQuery = '') {
+        const products = StoreDB.getProducts();
+        const grid = document.getElementById('shop-products-grid');
+        const homeGrid = document.getElementById('home-featured-products-grid');
+        
+        let filtered = products;
+        if (filterCategory !== 'all') {
+          filtered = filtered.filter(p => p.category === filterCategory);
+        }
+        if (searchQuery) {
+          const q = searchQuery.toLowerCase();
+          filtered = filtered.filter(p => p.title.toLowerCase().includes(q) || p.description.toLowerCase().includes(q));
+        }
+
+        const html = filtered.map(p => `
+          <div class="product-card" data-product-handle="${p.handle}">
+            <div class="product-card__image-wrapper">
+              <div class="product-card__badges">
+                <span class="badge badge-sale">${p.badge}</span>
+              </div>
+              <div class="product-card__actions">
+                <button type="button" class="btn-icon" data-quick-view data-product-handle="${p.handle}" aria-label="Quick View">👁️</button>
+              </div>
+              <a href="javascript:void(0)" onclick="viewProductDetail('${p.handle}')">
+                <img src="${p.image}" alt="${p.title}" class="product-card__image" loading="lazy" onerror="this.src='assets/watch-apex-pro.jpg'">
+              </a>
+              <div class="product-card__quick-add">
+                <button type="button" class="btn btn-primary btn-sm btn-full" onclick="KinetixCart.addItem('${p.handle}', '${p.title}', ${p.price}, '${p.image}')">Quick Add</button>
+              </div>
+            </div>
+            <div class="product-card__content">
+              <div class="product-card__vendor">${p.categoryName || 'Kinetix Pro'}</div>
+              <h3 class="product-card__title"><a href="javascript:void(0)" onclick="viewProductDetail('${p.handle}')">${p.title}</a></h3>
+              <div class="product-card__rating">
+                <div style="color:var(--accent-gold);">★★★★★</div>
+                <span style="font-size:0.8rem; color:var(--text-muted); margin-left:4px;">(${p.rating})</span>
+              </div>
+              <div class="product-card__price-wrapper">
+                <span class="product-price">$${p.price.toFixed(2)}</span>
+                ${p.comparePrice ? `<span class="product-price--compare">$${p.comparePrice.toFixed(2)}</span>` : ''}
+              </div>
+            </div>
+          </div>
+        `).join('');
+
+        if (grid) grid.innerHTML = html || '<div style="grid-column: span 4; text-align: center; color: var(--text-muted); padding: 48px;">No watches match your search criteria.</div>';
+        if (homeGrid) homeGrid.innerHTML = products.slice(0, 4).map(p => `
+          <div class="product-card" data-product-handle="${p.handle}">
+            <div class="product-card__image-wrapper">
+              <div class="product-card__badges"><span class="badge badge-sale">${p.badge}</span></div>
+              <a href="javascript:void(0)" onclick="viewProductDetail('${p.handle}')">
+                <img src="${p.image}" alt="${p.title}" class="product-card__image" loading="lazy" onerror="this.src='assets/watch-apex-pro.jpg'">
+              </a>
+              <div class="product-card__quick-add">
+                <button type="button" class="btn btn-primary btn-sm btn-full" onclick="KinetixCart.addItem('${p.handle}', '${p.title}', ${p.price}, '${p.image}')">Quick Add</button>
+              </div>
+            </div>
+            <div class="product-card__content">
+              <div class="product-card__vendor">${p.categoryName || 'Kinetix Pro'}</div>
+              <h3 class="product-card__title"><a href="javascript:void(0)" onclick="viewProductDetail('${p.handle}')">${p.title}</a></h3>
+              <div class="product-card__price-wrapper">
+                <span class="product-price">$${p.price.toFixed(2)}</span>
+                ${p.comparePrice ? `<span class="product-price--compare">$${p.comparePrice.toFixed(2)}</span>` : ''}
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      window.filterShopCategory = function(cat, btn) {
+        document.querySelectorAll('#shop-category-pills button').forEach(b => {
+          b.className = 'btn btn-secondary btn-sm';
+        });
+        btn.className = 'btn btn-primary btn-sm';
+        renderShopProducts(cat);
+      };
+
+      // View Product Details Handler
+      window.viewProductDetail = function(handle) {
+        const product = StoreDB.getProductByHandle(handle);
+        if (!product) return;
+
+        document.getElementById('detail-main-img').src = product.image;
+        document.getElementById('detail-title').textContent = product.title;
+        document.getElementById('detail-category').textContent = product.categoryName || product.category;
+        document.getElementById('detail-price').textContent = `$${product.price.toFixed(2)}`;
+        document.getElementById('detail-compare').textContent = product.comparePrice ? `$${product.comparePrice.toFixed(2)}` : '';
+        document.getElementById('detail-description').textContent = product.description;
+        document.getElementById('detail-badge').textContent = product.badge;
+
+        // WhatsApp Direct Order Link
+        const settings = StoreDB.getSettings();
+        const waNum = (settings.whatsappNumber || '+923001234567').replace(/[^0-9]/g, '');
+        const waMsg = encodeURIComponent(`Hi Kinetix Pro, I would like to order "${product.title}" for $${product.price.toFixed(2)}.`);
+        document.getElementById('detail-whatsapp-btn').href = `https://wa.me/${waNum}?text=${waMsg}`;
+
+        // Add to Cart Button on detail
+        document.getElementById('detail-add-cart-btn').onclick = () => {
+          KinetixCart.addItem(product.handle, product.title, product.price, product.image);
+        };
+
+        navigateTo('product-detail');
+      };
+
+      // Checkout Summary Renderer
+      function renderCheckoutSummary() {
+        const items = KinetixCart.items;
+        const listEl = document.getElementById('checkout-items-list');
+        const total = KinetixCart.getTotal();
+
+        if (listEl) {
+          listEl.innerHTML = items.map(i => `
+            <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.9rem;">
+              <div><strong>${i.title}</strong> <span style="color:var(--text-muted);">(x${i.qty})</span></div>
+              <div style="font-weight:700; color:var(--accent-gold);">$${(i.price * i.qty).toFixed(2)}</div>
+            </div>
+          `).join('');
+        }
+        document.getElementById('checkout-subtotal').textContent = `$${total.toFixed(2)}`;
+        document.getElementById('checkout-total').textContent = `$${total.toFixed(2)}`;
+      }
+
+      // Order Placement Submit
+      window.handleCheckoutSubmit = function () {
+        const name = document.getElementById('checkout-name').value;
+        const phone = document.getElementById('checkout-phone').value;
+        const email = document.getElementById('checkout-email').value;
+        const address = document.getElementById('checkout-address').value;
+        const city = document.getElementById('checkout-city').value;
+        const zip = document.getElementById('checkout-zip').value;
+        const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+
+        const order = StoreDB.createOrder({
+          customerName: name,
+          customerPhone: phone,
+          customerEmail: email,
+          address: address,
+          city: city,
+          country: 'Global Dispatch',
+          postalCode: zip,
+          paymentMethod: paymentMethod,
+          items: KinetixCart.items,
+          totalAmount: KinetixCart.getTotal()
         });
 
-        const swatches = document.querySelectorAll('.swatch-btn');
-        const finishLabel = document.getElementById('selected-finish-name');
-        swatches.forEach(s => {
-          s.addEventListener('click', () => {
-            swatches.forEach(el => el.classList.remove('active'));
-            s.classList.add('active');
-            if (finishLabel) {
-              finishLabel.textContent = s.getAttribute('data-finish');
-            }
-          });
+        // Reset cart
+        KinetixCart.items = [];
+        KinetixCart.render();
+
+        KinetixTheme.showToast(`🎉 Order ${order.orderId} Placed Successfully via ${paymentMethod}!`);
+
+        // Navigate to Order Tracking with this order preloaded
+        document.getElementById('tracking-input').value = order.orderId;
+        trackOrderQuery();
+        navigateTo('tracking');
+      };
+
+      // Order Tracking Lookup
+      window.trackOrderQuery = function() {
+        const q = document.getElementById('tracking-input').value;
+        const order = StoreDB.getOrderByTracking(q);
+        const box = document.getElementById('tracking-result-box');
+
+        if (order) {
+          box.classList.remove('hidden');
+          document.getElementById('track-order-id').textContent = order.orderId;
+          document.getElementById('track-status-badge').textContent = order.status;
+          document.getElementById('track-customer-name').textContent = order.customerName;
+          document.getElementById('track-number').textContent = order.trackingNumber;
+          document.getElementById('track-destination').textContent = `${order.city}, ${order.country}`;
+          document.getElementById('track-payment').textContent = order.paymentMethod;
+        } else {
+          alert('No order found matching "' + q + '". Please check your Order ID (e.g. KP-84920).');
+        }
+      };
+
+      // Load Settings into Floating WhatsApp link
+      document.addEventListener('DOMContentLoaded', () => {
+        renderShopProducts();
+        const settings = StoreDB.getSettings();
+        const waNum = (settings.whatsappNumber || '+923001234567').replace(/[^0-9]/g, '');
+        const waMsg = encodeURIComponent(settings.whatsappMessage || 'Hi Kinetix Pro, I would like to order.');
+        const waLink = `https://wa.me/${waNum}?text=${waMsg}`;
+        
+        const floatBtn = document.getElementById('floating-whatsapp-link');
+        const contactBtn = document.getElementById('contact-page-whatsapp-btn');
+        if (floatBtn) floatBtn.href = waLink;
+        if (contactBtn) contactBtn.href = waLink;
+
+        // Search bar listener
+        document.getElementById('shop-search-input')?.addEventListener('input', (e) => {
+          renderShopProducts('all', e.target.value);
         });
       });
     </script>

@@ -29,6 +29,7 @@
     {% endif %}
 
     {% render 'meta-tags' %}
+    {% render 'seo-schema' %}
 
     {{ content_for_header }}
 
@@ -47,7 +48,7 @@
           predictive_search_url: '{{ routes.predictive_search_url }}'
         },
         moneyFormat: {{ shop.money_format | json }},
-        freeShippingThreshold: {{ settings.free_shipping_threshold | default: 100 | json }}
+        freeShippingThreshold: {{ settings.free_shipping_threshold | default: 150 | json }}
       };
     </script>
   </head>
@@ -68,10 +69,13 @@
 
     {% section 'cart-drawer' %}
 
+    {% render 'whatsapp-button' %}
+
     <div id="quick-view-modal-container" class="quick-view-modal hidden" aria-hidden="true" role="dialog" aria-modal="true"></div>
     <div id="toast-notification-container" class="toast-container" aria-live="polite"></div>
 
     <!-- Scripts -->
+    <script src="{{ 'store-db.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
   </body>
 </html>
